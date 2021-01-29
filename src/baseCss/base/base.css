@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*
+1400/16=87.5em;
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px, 10px / 16px = 62.5%*/
+    
+}
+
+/*@media only screen and (max-width: 87.5em) {
+    html {font-size: 50%;} /* 1rem = 8px, 
+}*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: orangered;*/
+    color: var(--dark-grey);
+    margin-bottom: 100vh;
+}
+
+ul {
+    list-style: none;
+}

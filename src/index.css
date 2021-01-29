@@ -1,13 +1,7 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import "./baseCss/abstracts/mixins.css";
+@import "./baseCss/abstracts/variables.css";
+@import "./baseCss/base/animations.css";
+@import "./baseCss/base/base.css";
+@import "./baseCss/base/baseGridTemplate.css";
+@import "./baseCss/base/typography.css";
+@import "./baseCss/base/utility.css";

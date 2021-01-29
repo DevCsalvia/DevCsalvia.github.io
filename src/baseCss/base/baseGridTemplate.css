@@ -1,0 +1,4 @@
+.Feedback_Section {
+    display: grid;
+    grid-template-columns: minmax(4rem 26rem)[center-start] 1fr [center-end]minmax(4rem, 26rem);
+}

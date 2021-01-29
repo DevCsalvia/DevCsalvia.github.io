@@ -1,0 +1,79 @@
+/*************Main Styles****************/
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-grey: #e7eaee;
+    --color-light-grey-1: #eff3f3;
+    --color-grey: #686d73;
+    --color-dark-grey: #181518;
+    --color-star-yellow: #fdb940;
+
+    /*Header Height*/
+    --toolbar-height: 12rem;
+   }
+
+/*************Button Component****************/
+:root {
+    --buton-component-padding: 1rem 3rem;
+    --buton-component-background-color: var(--color-white);
+    --buton-component-color: currentColor;
+}
+
+/*************Toolbar Section****************/
+:root {
+    /*Toolbar size*/
+    --toolbar-width: 100%;
+    --toolbar-height: 8rem;
+
+    /*Toolbar background color*/
+    --toolbar-background-color: var(--color-white);
+
+    /*Toolbar grid columns template*/
+    --toolbar-grid-columns-template: minmax(4rem, 8rem) 1fr minmax(4rem, 8rem);
+
+    /*Toolbar logo size*/
+    --toolbar-logo-height: 4rem;
+
+    /*************Navigation component****************/
+    --toolbar-navigation-items-margin-centralization: -.7rem;
+    --toolbar-navigation-icons-margin-top:  -.7rem;
+
+    --toolbar-navigation-items-right-margin: 4rem;
+}
+
+/*************Slider Section****************/
+:root {
+    /*height of slide*/
+    --slider-height: calc(100vh - 8rem);
+
+    /*position of content(slogan btn)*/
+    --slider-content-top-margin: 12rem;
+    --slider-content-left-margin: 8rem;
+
+    /*top margin of h3 in slider content*/
+    --slider-h3-top-margin: 1.6rem;
+
+    /*top margin of button in slider content*/
+    --slider-button-top-margin: 4rem;
+
+    /*dots position from top*/
+    --slider-dots-top-position: calc(100% - 2.4rem);
+
+    /*dots right margin*/
+    --slider-dots-margin-right: 1rem;
+
+    /*dots height*/
+    --slider-dots-height: .7rem;
+
+    /*dots width*/
+    --slider-dots-width: 9rem;
+
+    /*dots border radius*/
+    --slider-dots-border-radius: .4rem;
+
+    /*dots border*/
+    --slider-dots-border-style: .1rem solid var(--color-white);
+
+    /*dots animation duration*/
+    --slider-dots-animation-duration: 2s;
+}

@@ -1,0 +1,24 @@
+.Toolbar  {
+    width: var(--toolbar-width);
+    height: var(--toolbar-height);
+    background-color: var(--toolbar-background-color);
+    display: grid;
+    grid-template-columns: var(--toolbar-grid-columns-template);
+    /*put items and logo into center*/
+    align-items: center;
+    /*border: .2rem solid black;*/
+}
+
+.Toolbar .Logo {
+    height: var(--toolbar-logo-height);
+}
+
+.Navigation_Wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.Navigation_Wrapper, .Toolbar .Logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+}

@@ -1,0 +1,11 @@
+.Button {
+    text-align: center;
+    display: inline-block;
+}
+
+.Button a{
+    display: inherit;
+    background-color: var(--buton-component-background-color);
+    padding: var(--buton-component-padding);
+    color: var(--buton-component-color);
+}

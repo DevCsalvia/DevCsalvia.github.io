@@ -1,0 +1,88 @@
+.Slider {
+    overflow: hidden;
+}
+
+.Slider .Slide {
+    /*for content part to be counted from slide*/
+    position: relative;
+    /*height of slide*/
+    height: var(--slider-height);
+    /*img styling*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*content styling*/
+.Slider .Slide__Content {
+    /*position of content(slogan btn etc...)*/
+    position: absolute;
+    top: var(--slider-content-top-margin);
+    left: var(--slider-content-left-margin);
+}
+
+.Slider .Slide__Content h3 {
+    /*top margin of h3 in slider content*/
+    margin-top: var(--slider-h3-top-margin);
+}
+
+.Slider .Slide__Content .Button {
+    /*top margin of button in slider content*/
+    margin-top: var(--slider-button-top-margin);
+}
+
+/*background imgs of slides in slider*/
+.Slider .Slide_1 {
+    background-image: url(../../assets/images/sliderImages/Slide_1.png);
+}
+
+.Slider .Slide_2 {
+    background-image: url(../../assets/images/sliderImages/35se.jpg);
+}
+
+.Slider .Slide_3 {
+    background-image: url(../../assets/images/sliderImages/Slide_1.png);
+}
+
+.Slider .Slide_4 {
+    background-image: url(../../assets/images/sliderImages/35se.jpg);
+}
+
+/*Dots styling*/
+#Dots__Wrapper{
+    /*to position dots from top*/
+    position: absolute;
+    top: var(--slider-dots-top-position);
+}
+
+#Dots__List li {
+    /*dots right margin*/
+    margin-right: var(--slider-dots-margin-right);
+    overflow: hidden;
+    height: var(--slider-dots-height);
+    width: var(--slider-dots-width);
+    border: var(--slider-dots-border-style);
+    cursor: initial;
+    border-radius: var(--slider-dots-border-radius);
+}
+
+#Dots__List button::before{
+    height: var(--slider-dots-height);
+    width: var(--slider-dots-width);
+}
+
+#Dots__List .slick-active button::after {
+    animation: dots-background-filling var(--slider-dots-animation-duration) cubic-bezier(0, 0, 0.76, 0.77) forwards;
+}
+
+#Dots__List li button::after {
+    content: '';
+    /*to position background of the dots to the left*/
+    position: absolute;
+    transform: translateX(-10rem) translateY(.2rem);
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    height: var(--slider-dots-height);
+    width: var(--slider-dots-width);
+}
