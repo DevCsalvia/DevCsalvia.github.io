@@ -1,7 +1,16 @@
 import Aux from '../../../hoc/Auxil/Auxil';
 
-import NavigationItem from './NavigationItem/NavigationItem';
+// My css
 import './NavigationItems.css';
+
+// My components
+import NavigationItem from './NavigationItem/NavigationItem';
+
+// My icons
+import { ReactComponent as HeartSvg } from '../../../assets/SVG-Icons/heart-o.svg';
+import { ReactComponent as SearchSvg } from '../../../assets/SVG-Icons/search.svg';
+import { ReactComponent as UserSvg } from '../../../assets/SVG-Icons/user.svg';
+import { ReactComponent as BoxSvg } from '../../../assets/SVG-Icons/dropbox.svg';
 
 const navigationItems = (props) => (
     <Aux>
@@ -12,10 +21,10 @@ const navigationItems = (props) => (
             <NavigationItem link="#">Contact</NavigationItem>
         </ul>
         <ul className="Navigation__icons">
-            <NavigationItem link="#">icon1</NavigationItem>
-            <NavigationItem link="#">icon2</NavigationItem>
-            <NavigationItem link="#">icon3</NavigationItem>
-            <NavigationItem link="#">icon4</NavigationItem>
+            <NavigationItem link="#"><HeartSvg /></NavigationItem>
+            <NavigationItem link="#"><SearchSvg /></NavigationItem>
+            <NavigationItem link="#"><UserSvg /></NavigationItem>
+            <NavigationItem link="#"><BoxSvg /></NavigationItem>
         </ul>
     </Aux>
 );

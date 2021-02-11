@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: var(--color-dark-grey);
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul {
+    list-style: none;
+}
+
+/***********Component Button************/
+.Button_Component{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/***********Card-Component************/
+.Card__User{
+    font-size: 1rem;
+}
+
+.Card__Title{
+    font-size: 1.6rem;
+}
+
+.Card__Text{
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+}
+
+/***********Toolbar************/
+.Navigation__items {
+    font-size: 1.4rem;
+}
+
+/***********Header-Slider************/
+.Slider .Slide__Content {
+    color: var(--color-white);
+}
+
+.Slider .Slide__Content span {
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 3.6rem;
+}
+
+.Slider .Slide__Content h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.Slider .Slide__Content .Button {
+    font-weight: thin;
+    color: var(--color-black);
+}
+
+/***********Feedback-Section************/
+.Rating_Wrapper {
+    font-size: 1.4rem;
+}
+
+.Rating_Wrapper .Rating_Stars {
+    margin: 0 1rem;
+}
+
+.Feedback_Section__Content h2{
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+.Feedback_Section__Text-box{
+    font-size: 1.2rem;
+}
+
+/***********Goods-Section************/
+.Goods-Section__Content__Heading{
+    font-size: 3.6rem;
+}
+
+.Goods-Section__Content__Paragraph{
+    font-size: 1.4rem;
+}
+
+/***********Summary-Section************/
+.Summary_Section__Content__Heading{
+    font-size: 3.6rem;
+}
+
+.Summary_Section__Content__Paragraph{
+    font-size: 1.4rem;
+}
+
+/***********Footer************/
+.Site-footer__social__message{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.Site-footer__nav__menu-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.Site-footer__nav__menu-links{
+    font-size: 1.2rem;
+}

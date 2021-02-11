@@ -1,3 +1,37 @@
 .Feedback_Section__Content{
     grid-column: center-start / center-end;
+    padding: var(--Feedback_Section__Content-Padding);
+}
+
+/*h2 feedback title margins*/
+.Feedback_Section__Title{
+    margin: var(--Feedback_Section__Title-h2-Margins);
+}
+
+/*Under title*/
+.Feedback_Section__Text-box{
+    margin-bottom: var(--Feedback_Section__Text-box-Margin-Bottom);
+}
+
+.Feedback_Section__Title, .Feedback_Section__Text-box{
+    text-align: center;
+}
+
+.Feedback_Section__Cards{
+    display: grid;
+    grid-template-columns: var(--Feedback_Section__Cards-Columns-Template);
+    justify-content: space-between;
+    row-gap: var(--Feedback_Section__Cards-Img-Row-Gap);
+}
+
+.Feedback_Section__Img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, max-content));
+    row-gap: var(--Feedback_Section__Cards-Img-Row-Gap);
+    margin-top: var(--Feedback_Section__Img-Margin-Top);
+    justify-content: center;
+}
+
+.Feedback_Section__Img img{
+    width: var(--Feedback_Section__Img-Width);
 }

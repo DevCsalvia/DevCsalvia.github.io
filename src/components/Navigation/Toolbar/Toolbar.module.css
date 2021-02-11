@@ -2,11 +2,8 @@
     width: var(--toolbar-width);
     height: var(--toolbar-height);
     background-color: var(--toolbar-background-color);
-    display: grid;
-    grid-template-columns: var(--toolbar-grid-columns-template);
     /*put items and logo into center*/
     align-items: center;
-    /*border: .2rem solid black;*/
 }
 
 .Toolbar .Logo {
@@ -14,8 +11,7 @@
 }
 
 .Navigation_Wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 .Navigation_Wrapper, .Toolbar .Logo {

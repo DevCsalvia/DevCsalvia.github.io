@@ -1,0 +1,35 @@
+.Input_Wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    padding: var(--Footer__Input-Wrapper-Padding);
+    width: var(--Footer__Input-Wrapper-Width);
+}
+
+.Input{
+    width: var(--Footer__Input-Field-Width);
+    padding: var(--Footer__Input-Field-Padding);
+    border: none;
+    outline: none; 
+}
+
+.Input:focus{
+    outline: 1px solid var(--color-grey);
+}
+
+.Button{
+    transform: translateX(-5%);
+    border: none;
+    outline: none;
+    background-color: var(--Footer__Input-Button-Background-Color);
+    width: var(--Footer__Input-Button-Width);
+    padding: var(--Footer__Input-Button-Padding);
+    cursor: pointer;
+}
+
+.Button svg{
+    width: var(--Footer__Input-Button-Svg-Arrow-Size);
+    height: var(--Footer__Input-Button-Svg-Arrow-Size);
+    fill: var(--color-white);
+}

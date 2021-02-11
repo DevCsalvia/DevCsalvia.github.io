@@ -1,0 +1,56 @@
+.Card_Wrapper{
+    max-width: var(--Card_Wrapper__Max-Width);
+    display: grid;
+    row-gap: var(--Card_Wrapper__Row-Gap);
+    padding: var(--Card_Wrapper__Padding);
+    justify-content: start;
+    border: var(--Card_Wrapper__Border);
+    border-radius: var(--Card_Wrapper__Border-Radius);
+}
+
+.Card_User{
+    display: flex;
+    align-items: center;
+}
+
+.Card_User__Img{
+    width: var(--Card_User__Img-Size);
+    height: var(--Card_User__Img-Size);
+    border-radius: var(--Card_User__Img-Border-Radius);
+    background-color: var(--color-light-grey);
+    margin-right: var(--Card_User__Img-Margin-Right);
+    /*img styling*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.Card_User__Img1{
+    background-image: url(../../../assets/images/FeedbackSection/Users/user_1.jpg);
+
+}
+
+.Card_User__Img2{
+    background-image: url(../../../assets/images/FeedbackSection/Users/user_2.jpg);
+
+}
+
+.Card_User__Img3{
+    background-image: url(../../../assets/images/FeedbackSection/Users/user_3.jpg);
+
+}
+
+.Card_Title{
+    
+}
+
+.Card_Stars{
+    margin-top: var(--Card_User__Img-Margin-Top);
+}
+
+.Card_Wrapper .Card_Stars svg{
+    width: var(--Card_User__Star-Size);
+    height: var(--Card_User__Star-Size);
+}
+
+.Card_Text{}
