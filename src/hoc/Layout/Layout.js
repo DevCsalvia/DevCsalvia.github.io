@@ -3,7 +3,9 @@ import Aux from '../Auxil/Auxil';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Footer from '../../components/Footer/Footer';
 
-const layout = props => {
+import './Layout.css';
+
+const Layout = props => {
     return (
         <Aux>
             <Toolbar />
@@ -15,4 +17,4 @@ const layout = props => {
     );
 }
 
-export default layout;
+export default Layout;

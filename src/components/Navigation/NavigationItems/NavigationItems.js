@@ -12,11 +12,11 @@ import { ReactComponent as SearchSvg } from '../../../assets/SVG-Icons/search.sv
 import { ReactComponent as UserSvg } from '../../../assets/SVG-Icons/user.svg';
 import { ReactComponent as BoxSvg } from '../../../assets/SVG-Icons/dropbox.svg';
 
-const navigationItems = (props) => (
+const NavigationItems = (props) => (
     <Aux>
         <ul className="Navigation__items">
-            <NavigationItem link="#">Costumes</NavigationItem>
-            <NavigationItem link="#">Sneakers</NavigationItem>
+            <NavigationItem link="/">Main</NavigationItem>
+            <NavigationItem link="/products">Products</NavigationItem>
             <NavigationItem link="#">About</NavigationItem>
             <NavigationItem link="#">Contact</NavigationItem>
         </ul>
@@ -29,4 +29,4 @@ const navigationItems = (props) => (
     </Aux>
 );
 
-export default navigationItems;
+export default NavigationItems;

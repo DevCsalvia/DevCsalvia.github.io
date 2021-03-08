@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 
-import classes from './Button.module.css';
+import './Button.css';
 
-const button = props => {
+const Button = props => {
     return (
-        <div className={classes.Button + ' ' + props.addClass + ' ' + 'Button_Component'}>
+        <div className={'Button ' + props.addClass}>
             <NavLink
                 exact={props.exact}
                 to={props.link}>{props.children}</NavLink>
@@ -13,4 +13,4 @@ const button = props => {
     );
 }
 
-export default button;
+export default Button;

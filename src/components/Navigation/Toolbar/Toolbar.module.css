@@ -3,11 +3,16 @@
     height: var(--toolbar-height);
     background-color: var(--toolbar-background-color);
     /*put items and logo into center*/
+    top: 0;
+    z-index: 10000;
     align-items: center;
+    position: fixed;
+    border-bottom: .1rem solid var(--color-black);
 }
 
 .Toolbar .Logo {
     height: var(--toolbar-logo-height);
+    justify-self: flex-start;
 }
 
 .Navigation_Wrapper {

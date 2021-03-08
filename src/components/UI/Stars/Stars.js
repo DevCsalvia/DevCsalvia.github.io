@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Stars.module.css';
 import Star from './Star/Star';
 
-const stars = props => {
+const Stars = props => {
     const starsOutput = [];
 
     for (let i = 0; i < parseFloat(props.amount); i++) {
@@ -16,4 +16,4 @@ const stars = props => {
     )
 }
 
-export default stars;
+export default Stars;

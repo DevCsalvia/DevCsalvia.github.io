@@ -11,23 +11,6 @@
     background-position: bottom;
 }
 
-/*background imgs of slides in slider*/
-.Slider .Slide_1 {
-    background-image: url(../../../assets/images/sliderImages/Slide_1.png);
-}
-
-.Slider .Slide_2 {
-    background-image: url(../../../assets/images/sliderImages/35se.jpg);
-}
-
-.Slider .Slide_3 {
-    background-image: url(../../../assets/images/sliderImages/Slide_1.png);
-}
-
-.Slider .Slide_4 {
-    background-image: url(../../../assets/images/sliderImages/35se.jpg);
-}
-
 /*Dots styling*/
 #Dots__Wrapper{
     /*to position dots from top*/
@@ -61,7 +44,7 @@
     transform: translateX(-10rem) translateY(.2rem);
     top: 0;
     left: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     height: var(--slider-dots-height);
     width: var(--slider-dots-width);
 }

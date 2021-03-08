@@ -6,13 +6,13 @@ import "slick-carousel/slick/slick-theme.css";
 // My styles
 import "./Slider.css";
 
-const slider = props => {
+const SliderComponent = props => {
     const settings = {
-        dots: true,
+        dots: props.dots ? props.dots : true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         speed: 400,
         autoplaySpeed: 2000,
         cssEase: "linear",
@@ -34,4 +34,4 @@ const slider = props => {
     );
 };
 
-export default slider;
+export default SliderComponent;

@@ -10,7 +10,7 @@ import { ReactComponent as TwitterSvg } from '../../assets/SVG-Icons/twitter.svg
 import { ReactComponent as FacebookSvg } from '../../assets/SVG-Icons/facebook.svg';
 import { ReactComponent as VkSvg } from '../../assets/SVG-Icons/vk.svg';
 
-const footer = props => (
+const Footer = props => (
     <footer className="Site-footer">
         <div className="Site-footer__content">
             <section className="Site-footer__social">
@@ -39,22 +39,22 @@ const footer = props => (
                         <li className="Site-footer__nav__submenu">
                             <span className="Site-footer__nav__menu-title">Discover More</span>
                             <ul className="Site-footer__nav__menu-links">
-                                <li><NavigationItem link="#">RUNNER Youtube</NavigationItem></li>
-                                <li><NavigationItem link="#">Digital Gift Card</NavigationItem></li>
-                                <li><NavigationItem link="#">Store Locations</NavigationItem></li>
-                                <li><NavigationItem link="#">Upcoming Events</NavigationItem></li>
+                                <NavigationItem link="#">RUNNER Youtube</NavigationItem>
+                                <NavigationItem link="#">Digital Gift Card</NavigationItem>
+                                <NavigationItem link="#">Store Locations</NavigationItem>
+                                <NavigationItem link="#">Upcoming Events</NavigationItem>
                             </ul>
                         </li>
                         <li className="Site-footer__nav__submenu">
                             <span className="Site-footer__nav__menu-title">Get Help</span>
                             <ul className="Site-footer__nav__menu-links">
-                                <li><NavigationItem link="#">FAQ</NavigationItem></li>
-                                <li><NavigationItem link="#">My Account</NavigationItem></li>
-                                <li><NavigationItem link="#">Customer Support</NavigationItem></li>
-                                <li><NavigationItem link="#">Exchanges & Returns</NavigationItem></li>
-                                <li><NavigationItem link="#">Afterpay</NavigationItem></li>
-                                <li><NavigationItem link="#">Accessibility</NavigationItem></li>
-                                <li><NavigationItem link="#">Privacy Policy</NavigationItem></li>
+                                <NavigationItem link="#">FAQ</NavigationItem>
+                                <NavigationItem link="#">My Account</NavigationItem>
+                                <NavigationItem link="#">Customer Support</NavigationItem>
+                                <NavigationItem link="#">Exchanges & Returns</NavigationItem>
+                                <NavigationItem link="#">Afterpay</NavigationItem>
+                                <NavigationItem link="#">Accessibility</NavigationItem>
+                                <NavigationItem link="#">Privacy Policy</NavigationItem>
                             </ul>
                         </li>
                     </ul>
@@ -69,4 +69,4 @@ const footer = props => (
     </footer>
 );
 
-export default footer;
+export default Footer;

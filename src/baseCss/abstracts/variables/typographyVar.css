@@ -1,0 +1,16 @@
+/* Font-Sizes */
+:root{
+    --Under-Head-Font-size: 1.8rem;
+
+    --Default-Font-Size: 1.6rem;
+
+    --Default-Font-Size-1: 1.4rem;
+
+    --Default-Font-Size-2: 1.2rem;
+
+    --Header-Heading-Font-Size: 4.8rem;
+
+    --Default-Heading-Font-Size: 3.6rem;
+
+    --Footer-Heading-Font-Size: 2.4rem;
+}

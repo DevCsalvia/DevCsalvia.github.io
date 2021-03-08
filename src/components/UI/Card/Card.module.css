@@ -11,6 +11,7 @@
 .Card_User{
     display: flex;
     align-items: center;
+    font-size: var(--Default-Font-Size-1);
 }
 
 .Card_User__Img{
@@ -41,7 +42,7 @@
 }
 
 .Card_Title{
-    
+    font-size: var(--Under-Head-Font-size);
 }
 
 .Card_Stars{
@@ -53,4 +54,7 @@
     height: var(--Card_User__Star-Size);
 }
 
-.Card_Text{}
+.Card_Text{
+    font-size: var(--Default-Font-Size-1);
+    line-height: 2.4rem;
+}
