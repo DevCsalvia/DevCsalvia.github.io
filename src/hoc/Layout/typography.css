@@ -1,0 +1,26 @@
+/***********Toolbar***********/
+.Navigation__items {
+    font-size: var(--Default-Font-Size);
+}
+
+
+/***********Footer************/
+.Site-footer__social__message{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: var(--Footer-Heading-Font-Size);
+    text-transform: uppercase;
+}
+
+.Site-footer__nav__menu-title{
+    font-size: var(--Default-Font-Size);
+    font-weight: 500;
+}
+
+.Site-footer__nav__menu-links{
+    font-size: var(--Default-Font-Size-1);
+}
+
+.Site-footer__bottom__copyright{
+    font-size: var(--Default-Font-Size-2);
+}

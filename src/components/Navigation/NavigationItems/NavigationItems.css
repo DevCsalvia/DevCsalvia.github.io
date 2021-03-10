@@ -1,0 +1,30 @@
+.Navigation__items, .Navigation__icons {
+    display: flex;
+}
+
+.Navigation__items {
+    align-self: end;
+    justify-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Navigation__icons svg {
+
+    width: var(--toolbar-navigation-icons-size);
+    height: var(--toolbar-navigation-icons-size);
+}
+
+.Navigation__icons {
+    justify-self: end;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Navigation__items li:not(:last-child) {
+    margin-right: var(--toolbar-navigation-items-right-margin);
+}
+
+.Navigation__icons li:not(:last-child) {
+    margin-right: var(--toolbar-navigation-icons-right-margin);
+}

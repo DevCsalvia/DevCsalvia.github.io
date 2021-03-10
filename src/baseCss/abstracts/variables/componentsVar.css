@@ -1,0 +1,38 @@
+/*************Stars Component****************/
+:root {
+    /*Stars Component Star Margin Right*/
+    --Stars_Component__Margin-Right: .2rem;
+}
+
+/*************Card Component****************/
+:root {
+    /*Card Wrapper Max Width*/
+    --Card_Wrapper__Max-Width: 34rem;
+
+    /*Card Wrapper Row Gap*/
+    --Card_Wrapper__Row-Gap: 2rem;
+
+    /*Card Wrapper Padding*/
+    --Card_Wrapper__Padding: 2.4rem 2rem;
+
+    /*Card Wrapper Border*/
+    --Card_Wrapper__Border: .2rem solid var(--color-black);
+
+    /*Card Wrapper Border Radius*/
+    --Card_Wrapper__Border-Radius: .4rem;
+
+    /*Card User Img Size(x and y)*/
+    --Card_User__Img-Size: 6rem;
+
+    /*Card User Img Border Radius*/
+    --Card_User__Img-Border-Radius: 50%;
+
+    /*Card User Img Margin Right*/
+    --Card_User__Img-Margin-Right: 1rem;
+
+    /*Card User Stars Margin Top*/
+    --Card_User__Img-Margin-Top: -1rem;
+
+    /*Card User Star Size*/
+    --Card_User__Star-Size: 1.4rem;
+}

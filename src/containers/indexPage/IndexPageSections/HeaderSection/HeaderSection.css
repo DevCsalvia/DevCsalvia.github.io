@@ -1,0 +1,40 @@
+.Slide {
+    grid-template-rows: var(--header-section-slider-grid-rows);
+}
+
+.Slide_1{
+    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_2.jpg);
+}
+
+.Slide_2{
+    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_3.2.jpg);
+}
+
+#Slide_3{
+    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_7.1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-color: #E0DFE7; /*Should remove*/
+}
+
+.Slide_4{
+    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_9.1.jpg);
+}
+
+.Slider .Slide__Content{
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+    display: grid;
+    justify-content: start;
+    row-gap: .4rem;
+    grid-template-rows: repeat(3, var(--slider-rows-content-template));
+}
+
+.Slider .Slide__Content h3 {
+    
+}
+
+.Slider .Slide__Content .Button {
+    /*top transform of button in slider content*/
+    transform: translateY(2.4rem);
+}

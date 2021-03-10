@@ -1,0 +1,62 @@
+/***********Header-Slider************/
+.Slider .Slide__Content {
+    color: var(--color-white);
+}
+
+.Slider .Slide__Content span {
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: var(--Header-Heading-Font-Size);
+    -webkit-text-stroke: 1px var(--color-black);
+    line-height: 6.2rem;
+}
+
+.Slider .Slide__Content h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: var(--Under-Head-Font-size);
+    text-shadow:
+    -1px -1px 0 var(--color-black),  
+        1px -1px 0 var(--color-black),
+        -1px 1px 0 var(--color-black),
+        1px 1px 0 var(--color-black);
+}
+
+.Slider .Slide__Content .Button {
+    color: var(--color-black);
+}
+
+/***********Feedback-Section************/
+.Rating_Wrapper {
+    font-size: var(--Default-Font-Size);
+}
+
+.Rating_Wrapper .Rating_Stars {
+    margin: 0 1rem;
+}
+
+.Feedback_Section__Content h2{
+    font-size: var(--Default-Heading-Font-Size);
+    font-weight: 500;
+}
+
+.Feedback_Section__UnderHead{
+    font-size: var(--Default-Font-Size-1);
+}
+
+/***********Goods-Section************/
+.Goods-Section__Content__Heading{
+    font-size: var(--Default-Heading-Font-Size);
+}
+
+.Goods-Section__Content__Paragraph{
+    font-size: 1.4rem;
+}
+
+/***********Summary-Section************/
+.Summary_Section__Content__Heading{
+    font-size: var(--Default-Heading-Font-Size);
+}
+
+.Summary_Section__Content__Paragraph{
+    font-size: var(--Default-Font-Size-1);
+}

@@ -1,0 +1,4 @@
+@keyframes dots-background-filling {
+    from {transform: translateX(-10rem);}
+    to {transform: translateX(0);}
+}

@@ -1,0 +1,5 @@
+.Star svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-star-yellow);
+}

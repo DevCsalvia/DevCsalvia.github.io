@@ -1,0 +1,16 @@
+.Button {
+    
+}
+
+.Button a{
+    font-size: var(--Default-Font-Size);
+    border-radius: .2rem;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background-color: var(--color-white);
+    color: currentColor;
+}
+
+.Button--Transparent a{
+    border: .1rem solid var(--color-black);
+}

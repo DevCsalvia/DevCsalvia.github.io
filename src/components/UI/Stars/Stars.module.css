@@ -1,0 +1,7 @@
+.StarsBlock {
+    display: flex;
+}
+
+.StarsBlock > div:not(:last-child) {
+    margin-right: var(--Stars_Component__Margin-Right);
+}

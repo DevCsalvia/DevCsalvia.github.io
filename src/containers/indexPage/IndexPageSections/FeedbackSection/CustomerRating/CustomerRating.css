@@ -1,0 +1,14 @@
+.Rating_Wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--Customers_Rating-Block__Padding);
+    border-radius: var(--Customers_Rating-Block__Border-Radius);
+    border: var(--Customers_Rating-Block__Border);
+    background-color: var(--Customers_Rating-Block__Background-Color);
+}
+
+.Rating_Wrapper .Rating_Stars svg {
+    width: var(--Customers_Rating-Block__Star-Size);
+    height: var(--Customers_Rating-Block__Star-Size);
+}

@@ -1,0 +1,28 @@
+.LikesList__Wrapper{
+    background-color: var(--color-white);
+    position: fixed;
+    top: var(--toolbar-height);
+    left: 100%;
+    transform: translateX(-100%);
+    padding: 1rem 2rem;
+    border: .1rem solid var(--color-black);
+    border-radius: .3rem;
+    box-shadow: .2rem 1rem 1rem rgba(0,0,0,0.2);
+}
+
+.LikesList__Wrapper span{
+    font-size: 1.2rem;
+}
+
+.LikesList{
+    display: grid;
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+.item_1_1_jpg{
+    /* background-image: url(../../assets/images/ProductsPage/Img/item_1.1.jpg); */
+}

@@ -1,0 +1,166 @@
+.Product-Details-Wrapper{
+    background-color: var(--color-light-grey);
+    /* for position sticky */
+    margin: -8rem 0 8rem 0;
+    transform: translateY(8rem);
+}
+
+.Products-Details__Content{
+    grid-column: 2 / 3;
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 43.2rem;
+    grid-template-rows: auto;
+    grid-column-gap: 5.8rem;
+}
+
+.Products-Details__Content__imgs-block{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.Products-Details__Content__img{
+    width: 100%;
+    height: 55rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Products-Details__Content__img img{
+    min-width: 100%; /*WTF IS GOING ON HERE why with width is not working?*/
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Side */
+.Products-Details__Content__product-props{
+    display: grid;
+    align-self: start;
+    row-gap: .3rem;
+    position: sticky;
+    top: 0;
+}
+
+.Products-Details__Content__product-title, .Products-Details__Content__product-price{
+    font-family: 'Lato', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.Products-Details__Content__product-price{
+
+}
+
+.Products-Details__Content__product-stars{
+    display: flex;
+    align-items: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.Products-Details__Content__product-stars span{
+    margin-left: 1rem;
+}
+
+.Products-Details__Content__product-size{
+    display: grid;
+    margin-top: 2rem;
+}
+
+
+.Products-Details__Content__Reviews{
+    
+}
+
+.Products-Details__Content__product-status{
+    font-size: 1.2rem;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.Products-Details__Content__product-size-grid{
+    margin-top: 1rem;
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 5rem));
+    grid-template-rows: repeat(3, 5rem);
+}
+
+.Products-Details__Content__product-size-grid button{
+    cursor: pointer;
+    outline: none;
+    border: .1rem solid var(--color-grey);
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.Products-Details__Content__product-size-grid button:hover{
+    border: .1rem solid var(--color-dark-grey);
+}
+
+.Products-Details__Content__product-props__Button-Wrapper{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.Products-Details__Content__product-props__Button-Wrapper
+.Products-Details__Content__product-props__Button{
+}
+
+.Products-Details__Content__product-props__Button{
+
+}
+
+.Products-Details__Content__product-props__Heart-Btn{
+    border: .1rem solid var(--color-dark-grey);
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/*BOTTOM BLOCk*/
+.Products-Details__Content__Reviews{
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 2rem;
+    background-color: var(--color-white);
+    padding: 4rem 0;
+}
+
+.Products-Details__Content__Reviews__Text-block{
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+.Products-Details__Content__Reviews__Text-block > span {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.Products-Details__Content__Reviews__Text-block > div{
+    display: flex;
+    align-items: center;
+}
+
+.Products-Details__Content__Reviews__Text-block > div span{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.Products-Details__Content__Reviews__Button a, .Products-Details__Content__product-props__Button a{
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.Products-Details__Content__Reviews__Button{
+
+}
