@@ -7,16 +7,20 @@ const LikesList = (props) => {
 
     let likesListMarkup = [];
 
-    // likesListMarkup.push(<Like imgUrl={props.likesArray[0].img}
-    //     title={props.likesArray[0].title}
-    //     name={props.likesArray[0].name}
-    //     price={props.likesArray[0].price}
-    //     key={0} />);
+    if (props.likesArray) props.likesArray.map(item => likesListMarkup.push(<Like
+        productId={item.id}
+        imgUrl={item.imgUrl}
+        title={item.title}
+        name={item.name}
+        price={item.price}
+        key={item.id} />));
 
     return (
-        <div className="LikesList__Wrapper">
-            <span>WISHLIST</span>
-            <div className="LikesList__Close"></div>
+        <div className={`LikesList__Wrapper ${props.likeState ? 'LikesList__Wrapper--Visibility' : ''} `}>
+            <div className="LikesList__Title-Wrapper">
+                <span>WISHLIST</span>
+                <div className="LikesList__Close" onClick={props.closeBtnHandler}></div>
+            </div>
             <ul className="LikesList">
                 {likesListMarkup}
                 {/* <Like imgClass={'item_1_1_jpg'}

@@ -15,9 +15,11 @@ const SummarySection = props => (
                     Guaranteed to help you find the best good <br />
                     and being satisfied while using it.
                 </p>
-                <Button addClass="Button--Transparent" link="#">Our Group</Button>
+                <Button addClass="Button--Border-Black" link="#">Our Group</Button>
             </div>
-            <div className="Summary_Section__Content__Img"></div>
+            <div className="Summary_Section__Content__Img">
+                <img src="./images/IndexPage/SummarySection/Image-1.png" alt="Group" />
+            </div>
         </div>
     </section>
 );

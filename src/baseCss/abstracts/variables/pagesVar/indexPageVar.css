@@ -1,35 +1,16 @@
 /*************Header Section****************/
 :root {
     /*grid template rows of slide to put content in a place*/
-    --header-section-slider-grid-rows: 12rem min-content;
+    --Header-Section__Slider-Grid-Rows: 12rem min-content;
+    
+    /*height of slide*/
+    --Header-Section__Slider-Height: calc(100vh - 8rem);
 
-    /*************Slider Component Styles****************/
-        /*height of slide*/
-        --slider-height: calc(100vh - 8rem);
+    /* Content Row Gap */
+    --Header-Section__Slide__Content-Row-Gap: .4rem;
 
-        /*rows content template*/
-        --slider-rows-content-template: max-content;
-
-        /*dots position from top*/
-        --slider-dots-top-position: calc(100% - 2.4rem);
-
-        /*dots right margin*/
-        --slider-dots-margin-right: 1rem;
-
-        /*dots height*/
-        --slider-dots-height: .7rem;
-
-        /*dots width*/
-        --slider-dots-width: 9rem;
-
-        /*dots border radius*/
-        --slider-dots-border-radius: .4rem;
-
-        /*dots border*/
-        --slider-dots-border-style: .1rem solid var(--color-black);
-
-        /*dots animation duration*/
-        --slider-dots-animation-duration: 2s;
+    /* Content Button TranslationY */
+    --Header-Section__Slide__Content__Button-TranslateY: 2.4rem;
 }
 
 /********Customers Rating Block*********/

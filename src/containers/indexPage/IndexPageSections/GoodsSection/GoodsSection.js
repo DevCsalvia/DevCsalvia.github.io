@@ -20,9 +20,11 @@ const GoodsSection = props => (
                         them up with a suit for a business casual <br /> style.
                         Sneakers offer a level of style, versatility, and <br /> comfort that other shoes just can’t match.
                     </p>
-                    <Button addClass="Button--Transparent" link="/products">Shop Now</Button>
+                    <Button addClass="Button--Border-Black" link="/products">Shop Now</Button>
                 </div>
-                <div className="Goods-Section__Content__Img"></div>
+                <div className="Goods-Section__Content__Img">
+                    <img src="./images/IndexPage/GoodsSection/good-1.jpg" alt="PRODUCT" />
+                </div>
             </div>
             <div className="Goods-Section__Content-Second">
                 <div className="Goods-Section__Content-Text">
@@ -37,9 +39,11 @@ const GoodsSection = props => (
                         them up with a suit for a business casual <br /> style.
                         Sneakers offer a level of style, versatility, and <br /> comfort that other shoes just can’t match.
                     </p>
-                    <Button addClass="Button--Transparent" link="/products">Shop Now</Button>
+                    <Button addClass="Button--Border-Black" link="/products">Shop Now</Button>
                 </div>
-                <div className="Goods-Section__Content__Img"></div>
+                <div className="Goods-Section__Content__Img">
+                    <img src="./images/IndexPage/GoodsSection/good-2.jpg" alt="PRODUCT" />
+                </div>
             </div>
         </div>
     </section>

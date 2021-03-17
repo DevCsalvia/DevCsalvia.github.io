@@ -1,6 +1,8 @@
-import { takeEvery, all, takeLatest } from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga/effects';
 
 import * as actionTypes from '../actions/actionTypes';
+import { initProductsSaga } from './product';
 
-export function* watchLikes() {
+export function* watchProducts() {
+    yield takeEvery(actionTypes.INITIATE_PRODUCTS, initProductsSaga);
 }

@@ -11,6 +11,11 @@
     color: currentColor;
 }
 
-.Button--Transparent a{
+.Button--Border-Black a{
     border: .1rem solid var(--color-black);
+}
+
+.Button--Black a {
+    color: var(--color-white);
+    background-color: var(--color-black);
 }

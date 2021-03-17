@@ -31,8 +31,10 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     border-radius: var(--Summary_Section__Img-Border-Radius);
-    background-image: url(../../../../assets/images/IndexPage/SummarySection/Image-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+}
+
+.Summary_Section__Content__Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

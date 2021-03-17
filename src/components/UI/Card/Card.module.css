@@ -20,25 +20,13 @@
     border-radius: var(--Card_User__Img-Border-Radius);
     background-color: var(--color-light-grey);
     margin-right: var(--Card_User__Img-Margin-Right);
-    /*img styling*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    overflow: hidden;
 }
 
-.Card_User__Img1{
-    background-image: url(../../../assets/images/IndexPage/FeedbackSection/Users/user_1.jpg);
-
-}
-
-.Card_User__Img2{
-    background-image: url(../../../assets/images/IndexPage/FeedbackSection/Users/user_2.jpg);
-
-}
-
-.Card_User__Img3{
-    background-image: url(../../../assets/images/IndexPage/FeedbackSection/Users/user_3.jpg);
-
+.Card_User__Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .Card_Title{

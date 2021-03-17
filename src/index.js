@@ -4,19 +4,21 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-
+import ScrollToTop from './shared/ScrolledToTop';
 
 import './index.css';
 import App from './App';
-import likesReducer from './store/reducers/likes';
-import { watchLikes } from './store/sagas/rootSaga';
+import likesReducer from './store/reducers/like';
+import productsReducer from './store/reducers/product';
+import { watchProducts } from './store/sagas/rootSaga';
 //import reportWebVitals from './reportWebVitals';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 /* List of our Reducers */
 const rootReducer = combineReducers({
-  likes: likesReducer
+  like: likesReducer,
+  product: productsReducer
 });
 
 /* MiddleWare What will be used */
@@ -28,12 +30,13 @@ const store = createStore(rootReducer, composeEnhancers(
 ));
 
 /* Run Saga MiddleWare to watch after all actions related to Likes */
-sagaMiddleware.run(watchLikes);
+sagaMiddleware.run(watchProducts);
 
 const app = (
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </Provider>

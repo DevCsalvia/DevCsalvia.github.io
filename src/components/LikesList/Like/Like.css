@@ -5,7 +5,7 @@
 .List__Item a{
     display: grid;
     grid-template-columns: 1fr 14rem;
-    column-gap: 1rem;
+    column-gap: 2rem;
 }
 
 .Likes__link{
@@ -13,7 +13,7 @@
 }
 
 .Likes__img{
-    width: 10rem; /* Should think about it! */
+    min-width: 10rem;  /*Should think about it! */
     height: 7rem;
     border-radius: .3rem;
     background-position: center;
@@ -33,18 +33,18 @@
 
 .Likes__title{
     align-self: start;
-    font-size: 1rem;
+    font-size: var(--Default-Font-Size-2);
     color: var(--color-grey);
 }
 
 .Likes__name{
     align-self: start;
-    font-size: 1.2rem;
+    font-size: var(--Default-Font-Size-2);
     font-weight: 600;
 }
 
 .Likes__price{
     align-self: end;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: var(--Default-Font-Size-2);
 }

@@ -8,13 +8,13 @@ import "./Slider.css";
 
 const SliderComponent = props => {
     const settings = {
-        dots: props.dots ? props.dots : true,
-        infinite: true,
+        dots: props.dots ? true : false,
+        infinite: props.infinite ? true : false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
-        speed: 400,
-        autoplaySpeed: 2000,
+        autoplay: props.autoplay ? true : false,
+        speed: props.speed ? props.speed : 400,
+        autoplaySpeed: props.autoplaySpeed ? props.autoplaySpeed : 2000,
         cssEase: "linear",
         appendDots: dots => (
             <div

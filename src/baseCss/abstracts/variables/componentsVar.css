@@ -36,3 +36,27 @@
     /*Card User Star Size*/
     --Card_User__Star-Size: 1.4rem;
 }
+
+/*************Slider Component Styles****************/
+:root{
+    /*dots position from top*/
+    --Slider-Dots__Top-Position: calc(100% - 2.4rem);
+
+    /*dots right margin*/
+    --Slider-Dots__Margin-Right: 1rem;
+
+    /*dots height*/
+    --Slider-Dots__Height: .7rem;
+
+    /*dots width*/
+    --Slider-Dots__Width: 9rem;
+
+    /*dots border radius*/
+    --Slider-Dots__Border-Radius: .4rem;
+
+    /*dots border*/
+    --Slider-Dots__Border-Style: .1rem solid var(--color-black);
+
+    /*dots animation duration*/
+    --Slider-Dots__Animation-Duration: 2s;
+}

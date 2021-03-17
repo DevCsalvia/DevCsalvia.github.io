@@ -1,40 +1,49 @@
-.Slide {
-    grid-template-rows: var(--header-section-slider-grid-rows);
+.Slider .Header-Section__Slide {
+    /*height of slide*/
+    height: var(--Header-Section__Slider-Height);
+    grid-template-rows: var(--Header-Section__Slider-Grid-Rows);
 }
 
-.Slide_1{
-    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_2.jpg);
+.Header-Section__Slide__Img{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    overflow: hidden;
 }
 
-.Slide_2{
-    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_3.2.jpg);
+.Header-Section__Slide__Img img{
+    width: 100vw;
+    height: 100vh; /* Why % doesn't work? */
+    object-fit: cover;
+    object-position: bottom;
 }
 
-#Slide_3{
-    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_7.1.jpg);
-    background-position: center;
-    background-size: contain;
+.Header-Section__Slide_3{
     background-color: #E0DFE7; /*Should remove*/
 }
 
-.Slide_4{
-    background-image: url(../../../../assets/images/IndexPage/SliderImages/item_9.1.jpg);
+.Header-Section__Slide_3 img{
+    object-fit: contain;
 }
 
-.Slider .Slide__Content{
+.Slider .Header-Section__Slide__Content{
     grid-column: 2 / 3;
     grid-row: 2 / -1;
     display: grid;
     justify-content: start;
-    row-gap: .4rem;
-    grid-template-rows: repeat(3, var(--slider-rows-content-template));
+    row-gap: var(--Header-Section__Slide__Content-Row-Gap);
+    grid-template-rows: repeat(3, max-content);
+    animation: moveInBottom .4s linear forwards;
 }
 
-.Slider .Slide__Content h3 {
+.Slider .Header-Section__Slide__Content span{
+}
+
+.Slider .Header-Section__Slide__Content h3 {
     
 }
 
-.Slider .Slide__Content .Button {
+.Slider .Header-Section__Slide__Content .Button {
     /*top transform of button in slider content*/
-    transform: translateY(2.4rem);
+    transform: translateY(var(--Header-Section__Slide__Content__Button-TranslateY));
 }
+

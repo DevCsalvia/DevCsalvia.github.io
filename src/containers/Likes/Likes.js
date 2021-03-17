@@ -1,51 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import LikesList from '../../components/LikesList/LikesList';
 
+import * as actions from '../../store/actions/index';
+
 const Likes = (props) => {
+    /* Hooks Way to work with Redux Dispatch(useDispatch) and Get Access To Redux Store(useSelector) */
+    const dispatch = useDispatch();
 
-    const [likes, setLikeArray] = useState([]);
+    const likes = useSelector(state => state.like.likes);
 
-    const addLike = (id, title, name, img, price) => {
-        const like = { id, title, name, img, price };
-        setLikeArray(oldArray => [...likes, like]);
+    /* Likes Functionality useCallback is used to not to recreate function inside*/
+    const onInitLikes = useCallback(
+        () => dispatch(actions.initLikes()),
+        [dispatch]
+    );;
 
-        // Persist the data in localStorage
-        // persistData();
+    /* Likes Initializing from LocalStorage*/
+    useEffect(() => {
+        onInitLikes();
+    }, [onInitLikes]);
 
-        return like;
-    }
 
-    // const deleteLike = (id) => {
-    //     const index = likes.findIndex(el => el.id === id);
-    //     likes.splice(index, 1);
-
-    //     // Persist data in localStorage
-    //     persistData();
-    // }
-
-    const isLiked = (id) => {
-        return likes.findIndex(el => el.id === id) !== -1;
-    }
-
-    // const getNumLikes = () => {
-    //     return likes.length;
-    // }
-
-    // const persistData = () => {
-    //     // JSON.stringify will convert our array into string;
-    //     localStorage.setItem('likes', JSON.stringify(likes))
-    // }
-
-    // const readStorage = () => {
-    //     // JSON.parse will convert string into the data structures witch were before
-    //     const storage = JSON.parse(localStorage.getItem('likes'));
-
-    //     // Restoring likes from the localStorage
-    //     if (storage) likes = storage;
-    // }
-
-    return <LikesList likesArray={likes} />
+    return <LikesList likesArray={likes} likeState={props.likeState} closeBtnHandler={props.closeBtnHandler} />
 }
+
+
 
 export default Likes;

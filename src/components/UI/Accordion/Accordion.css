@@ -1,0 +1,51 @@
+/**************** ACCORDION ***************/
+
+.Accodrion-Container label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Accodrion-Container label span{
+    font-size: 2rem;
+}
+
+.Accodrion-Container input:checked + .Accodrion-Container label:hover:after {
+}
+
+.Accodrion-Container input{
+    display: none;
+}
+
+.Accodrion-Container ul{
+    overflow: hidden;
+    height: 0px;
+    padding: 0;
+    transition: height 0.3s ease-in-out;
+}
+
+.Accodrion-Container ul{
+    list-style:disc;
+    display: grid;
+    row-gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.Accodrion-Container input:checked ~ ul {
+    transition: height 0.3s ease-in-out;
+    background-color: white;
+    padding: 1rem 2rem;
+    height: 40rem;
+}
+
+.Accodrion-Container ul p{
+    
+}

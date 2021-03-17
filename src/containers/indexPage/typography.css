@@ -1,9 +1,9 @@
 /***********Header-Slider************/
-.Slider .Slide__Content {
+.Slider .Header-Section__Slide__Content {
     color: var(--color-white);
 }
 
-.Slider .Slide__Content span {
+.Slider .Header-Section__Slide__Content span {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     font-size: var(--Header-Heading-Font-Size);
@@ -11,7 +11,7 @@
     line-height: 6.2rem;
 }
 
-.Slider .Slide__Content h3 {
+.Slider .Header-Section__Slide__Content h3 {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: var(--Under-Head-Font-size);
     text-shadow:
@@ -21,7 +21,7 @@
         1px 1px 0 var(--color-black);
 }
 
-.Slider .Slide__Content .Button {
+.Slider .Header-Section__Slide__Content .Button {
     color: var(--color-black);
 }
 

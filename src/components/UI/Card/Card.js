@@ -3,17 +3,12 @@ import classes from './Card.module.css';
 import Stars from '../Stars/Stars';
 
 const Card = props => {
-    let img = '';
-    switch (props.num) {
-        case '1': img = classes.Card_User__Img1; break;
-        case '2': img = classes.Card_User__Img2; break;
-        default: img = classes.Card_User__Img3;
-    }
-    const imgClasses = [classes.Card_User__Img, img];
     return (
         <div className={classes.Card_Wrapper}>
             <div className={classes.Card_User}>
-                <div className={imgClasses.join(' ')}></div>
+                <div className={classes.Card_User__Img}>
+                    <img src={`./images/IndexPage/FeedbackSection/Users/${props.userImgUrl}`} alt="USER" />
+                </div>
                 {props.name}
             </div>
             <h3 className={classes.Card_Title}>

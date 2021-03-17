@@ -7,7 +7,8 @@ import './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 // My icons
-import { ReactComponent as HeartSvg } from '../../../assets/SVG-Icons/heart-o.svg';
+import { ReactComponent as HeartOSvg } from '../../../assets/SVG-Icons/heart-o.svg';
+import { ReactComponent as HeartSvg } from '../../../assets/SVG-Icons/heart.svg';
 import { ReactComponent as SearchSvg } from '../../../assets/SVG-Icons/search.svg';
 import { ReactComponent as UserSvg } from '../../../assets/SVG-Icons/user.svg';
 import { ReactComponent as BoxSvg } from '../../../assets/SVG-Icons/dropbox.svg';
@@ -21,7 +22,9 @@ const NavigationItems = (props) => (
             <NavigationItem link="#">Contact</NavigationItem>
         </ul>
         <ul className="Navigation__icons">
-            <NavigationItem link="#"><HeartSvg /></NavigationItem>
+            <NavigationItem link="#" iconClickedHandler={props.likeBtnClicked}>
+                {props.likeState ? <HeartSvg /> : <HeartOSvg />}
+            </NavigationItem>
             <NavigationItem link="#"><SearchSvg /></NavigationItem>
             <NavigationItem link="#"><UserSvg /></NavigationItem>
             <NavigationItem link="#"><BoxSvg /></NavigationItem>

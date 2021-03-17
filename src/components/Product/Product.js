@@ -1,18 +1,30 @@
+import { NavLink } from 'react-router-dom';
 import Aux from '../../hoc/Auxil/Auxil';
 
 // My icons
-import { ReactComponent as HeartSvg } from '../../assets/SVG-Icons/heart-o.svg';
+import { ReactComponent as HeartOSvg } from '../../assets/SVG-Icons/heart-o.svg';
+import { ReactComponent as HeartSvg } from '../../assets/SVG-Icons/heart.svg';
 
 import './Product.css';
 
-const Product = (props) => (
-    <Aux>
+const Product = (props) => {
+    return (<Aux>
         <li className="Product__grid__item">
-            <button>
-                <HeartSvg />
+            <button className="Product__grid__item__like-btn"
+                onClick={() => props.likeBtnClicked({
+                    id: props.id,
+                    imgUrl: props.imgUrl,
+                    name: props.name,
+                    price: props.price,
+                    title: props.title
+                })}>
+                {props.isLiked ? <HeartSvg /> : <HeartOSvg />}
             </button>
             <div className="Product__grid__item__img">
-                <img src={`./images/ProductsPage/img/${props.imgUrl}`} alt="Product Img" />
+                <NavLink
+                    to={props.linkUrl + '/' + props.id}>
+                    <img src={`./images/ProductsPage/img/${props.imgUrl}`} alt="Product Img" />
+                </NavLink>
             </div>
             <h6 className="Product__grid__item__name">{props.name}</h6>
             <span className="Product__grid__item__price">{props.price}rub</span>
@@ -81,7 +93,7 @@ const Product = (props) => (
             <h6 className="Product__grid__item__title">WHITE WILD T-SHIRT (WOMEN'S)</h6>
             <span className="Product__grid__item__price">1699р</span>
         </li> */}
-    </Aux>
-);
+    </Aux>)
+};
 
 export default Product;

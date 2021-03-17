@@ -2,39 +2,30 @@
     overflow: hidden;
 }
 
-.Slider .Slide {
-    /*height of slide*/
-    height: var(--slider-height);
-    /*img styling*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-
 /*Dots styling*/
 #Dots__Wrapper{
     /*to position dots from top*/
-    top: var(--slider-dots-top-position);
+    top: var(--Slider-Dots__Top-Position);
+    animation: moveInBottom .4s linear forwards;
 }
 
 #Dots__List li {
     /*dots right margin*/
-    margin-right: var(--slider-dots-margin-right);
+    margin-right: var(--Slider-Dots__Margin-Right);
     overflow: hidden;
-    height: var(--slider-dots-height);
-    width: var(--slider-dots-width);
-    border: var(--slider-dots-border-style);
-    cursor: initial;
-    border-radius: var(--slider-dots-border-radius);
+    height: var(--Slider-Dots__Height);
+    width: var(--Slider-Dots__Width);
+    border: var(--Slider-Dots__Border-Style);
+    border-radius: var(--Slider-Dots__Border-Radius);
 }
 
 #Dots__List button::before{
-    height: var(--slider-dots-height);
-    width: var(--slider-dots-width);
+    height: var(--Slider-Dots__Height);
+    width: var(--Slider-Dots__Width);
 }
 
 #Dots__List .slick-active button::after {
-    animation: dots-background-filling var(--slider-dots-animation-duration) cubic-bezier(0, 0, 0.76, 0.77) forwards;
+    animation: dots-background-filling var(--Slider-Dots__Animation-Duration) cubic-bezier(0, 0, 0.76, 0.77) forwards;
 }
 
 #Dots__List li button::after {
@@ -45,6 +36,6 @@
     top: 0;
     left: 0;
     background-color: var(--color-black);
-    height: var(--slider-dots-height);
-    width: var(--slider-dots-width);
+    height: var(--Slider-Dots__Height);
+    width: var(--Slider-Dots__Width);
 }

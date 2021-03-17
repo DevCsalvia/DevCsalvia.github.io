@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 import Aux from '../../hoc/Auxil/Auxil';
-import axios from '../../axios-orders';
+import * as actions from '../../store/actions';
 
 import Product from '../../components/Product/Product';
 import ProductDetails from '../../components/Product/ProductDetails/ProductDetails';
@@ -9,57 +10,82 @@ import ProductDetails from '../../components/Product/ProductDetails/ProductDetai
 import './ProductsPage.css';
 
 const ProductsPage = (props) => {
+    /* Hooks Way to work with Redux Dispatch(useDispatch) and Get Access To Redux Store(useSelector) */
+    const dispatch = useDispatch();
 
-    const [productsObjArray, setProductsArray] = useState({});
+    /* Redux Store Access */
+    const likes = useSelector(state => state.like.likes);
+    const products = useSelector(state => state.product.products);
 
-    /* Should think about loading several times */
-    /* Getting array of product objects and set into useState Later we will do it in Redux */
+    /* Likes Functionality */
+    const onAddLike = like => dispatch(actions.addLike(like));
+    const onRemoveLike = id => dispatch(actions.removeLike(id));
+
+    /* Products Functionality useCallback is used to not to recreate function inside */
+    const onInitProducts = useCallback(
+        () => dispatch(actions.initProducts()),
+        [dispatch]
+    );
+
+    /* Prouducts Initializing from DataBase*/
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios.get('/products.json');
-            setProductsArray(result.data);
-        };
+        onInitProducts();
+    }, [onInitProducts]);
 
-        fetchData();
-    }, []);
+    /* Take object keys and compare them to id to know liked or not (Should ask about place of this function) */
+    const isLiked = (id) => {
+        return Object.keys(likes).find((item) => (likes[item].id === id)) ? true : false;
+    }
 
-    /* Create Products Markup(li elements) */
-    let productsMarkup = Object.keys(productsObjArray)
-        .map(productKey => {
-            let product = productsObjArray[productKey];
-            // console.log(product);
+    const likeBtnClickedHandler = (like) => isLiked(like.id) ? onRemoveLike(like.id) : onAddLike(like);
 
-            return <Product key={productKey}
-                id={productKey}
-                name={product.name}
-                price={product.price}
-                imgUrl={product.imgUrl.split(' ')[0]} />
-        })
-        .reduce((arr, el) => {
-            return arr.concat(el)
-        }, []);
+    /* Create Products Items Markup(li elements) */
+    let productsListItemsMarkup = '';
+    if (products) {
+        productsListItemsMarkup = Object.keys(products)
+            .map(productId => {
+                let product = products[productId];
+                // console.log(product);
 
-    // console.log(productsMarkup); //Should set Data through axios post Think about it!
+                return <Product key={productId}
+                    id={productId}
+                    name={product.name}
+                    price={product.price}
+                    imgUrl={product.imgUrl.split(' ')[0]}
+                    title={product.title}
+                    likeBtnClicked={likeBtnClickedHandler}
+                    linkUrl={props.match.url}
+                    isLiked={isLiked(productId)} />
+            })
+            .reduce((arr, el) => {
+                return arr.concat(el)
+            }, []);
+    }
 
-    let products = <div className="Products-Wrapper">
+    /* Products Markup */
+    let productsMarkup = <div className="Products-Wrapper">
         <div className="Products__Top-Img">
             <img src="./images/ProductsPage/Products-img-top.jpg" alt="Head Img" />
         </div>
         <div className="Products__Content">
             <h2 className="Products__Content__heading">Our BestSellers</h2>
             <ul className="Products__List">
-                {productsMarkup}
+                {productsListItemsMarkup}
             </ul>
         </div>
     </div>;
+
+    /* ProductsDetails Markup if product is clicked */
     if (!(props.location.pathname === props.match.url)) {
-        products = <Route
-            path={props.match.path + '/productdetails'}
-            render={() => <ProductDetails />} />
+        productsMarkup =
+            <Route
+                path={props.match.path + '/:id'}
+                render={() => <ProductDetails likeBtnClicked={likeBtnClickedHandler} isLiked={isLiked} />} />
     }
+
     return (
         <Aux>
-            {products}
+            {productsMarkup}
         </Aux>
     );
 };
