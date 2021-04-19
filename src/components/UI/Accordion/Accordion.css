@@ -27,23 +27,22 @@
 
 .Accodrion-Container ul{
     overflow: hidden;
-    height: 0px;
-    padding: 0;
-    transition: height 0.3s ease-in-out;
-}
+    background-color: white;
 
-.Accodrion-Container ul{
     list-style:disc;
     display: grid;
     row-gap: 1rem;
     font-size: 1.2rem;
+
+    max-height: 0;
+    padding: 0;
+    transition: padding .2s linear, max-height 1s cubic-bezier(0, 1, 0, 1);
 }
 
 .Accodrion-Container input:checked ~ ul {
-    transition: height 0.3s ease-in-out;
-    background-color: white;
     padding: 1rem 2rem;
-    height: 40rem;
+    max-height: 1000px;
+    transition: padding .2s linear,max-height 1s cubic-bezier(0, 1, 0, 1);
 }
 
 .Accodrion-Container ul p{

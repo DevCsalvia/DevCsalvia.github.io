@@ -1,21 +1,41 @@
 .Button {
+    outline: none;
+    border: none;
+    position: relative;
+
+    display: inline-block;
+    border-radius: .2rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+    font-size: var(--Default-Font-Size);
+    padding: 1.5rem 4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s;
     
 }
 
-.Button a{
-    font-size: var(--Default-Font-Size);
-    border-radius: .2rem;
-    display: inline-block;
-    padding: 1.5rem 4rem;
-    background-color: var(--color-white);
-    color: currentColor;
+.Button:hover{
+    transform: translateY(-.4rem);
+    box-shadow: .3rem .4rem .4rem rgba(0,0,0,.2);
 }
 
-.Button--Border-Black a{
+.Button:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.Button a{
+    color: currentColor;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+}
+
+.Button--Border-Black{
     border: .1rem solid var(--color-black);
 }
 
-.Button--Black a {
+.Button--Black {
     color: var(--color-white);
     background-color: var(--color-black);
 }

@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.Summary_Section__Content .Button{
+    justify-self: start;
+}
+
 .Summary_Section__Content-Text{
     grid-column: 2 / 3;
     grid-row: 1 / 2;

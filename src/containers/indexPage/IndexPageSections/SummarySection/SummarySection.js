@@ -5,7 +5,7 @@ import "./SummarySection.css";
 import Button from '../../../../components/UI/Button/Button';
 
 const SummarySection = props => (
-    <section className="Summary_Section">
+    <section className="Summary_Section section--hidden">
         <div className="Summary_Section__Content">
             <div className="Summary_Section__Content-Text">
                 <h3 className="Summary_Section__Content__Heading">
@@ -18,7 +18,10 @@ const SummarySection = props => (
                 <Button addClass="Button--Border-Black" link="#">Our Group</Button>
             </div>
             <div className="Summary_Section__Content__Img">
-                <img src="./images/IndexPage/SummarySection/Image-1.png" alt="Group" />
+                <img className="lazy-img"
+                    src="./images/IndexPage/SummarySection/3x/Image-1.jpg"
+                    data-src="./images/IndexPage/SummarySection/1x/Image-1.jpg"
+                    alt="Group" />
             </div>
         </div>
     </section>

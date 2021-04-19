@@ -1,15 +1,14 @@
 .Input_Wrapper{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     background-color: var(--color-white);
-    padding: var(--Footer__Input-Wrapper-Padding);
-    width: var(--Footer__Input-Wrapper-Width);
+    padding: .1rem 0;
+    width: 40rem;
 }
 
 .Input{
-    width: var(--Footer__Input-Field-Width);
-    padding: var(--Footer__Input-Field-Padding);
+    width: 75%;
+    padding: 1.3rem 0 1.3rem 1rem;
     border: none;
     outline: none; 
 }
@@ -22,14 +21,15 @@
     transform: translateX(-5%);
     border: none;
     outline: none;
-    background-color: var(--Footer__Input-Button-Background-Color);
-    width: var(--Footer__Input-Button-Width);
-    padding: var(--Footer__Input-Button-Padding);
+    background-color: var(--color-black);
+    width: 20%;
+    align-self: center;
+    padding: .8rem 0;
     cursor: pointer;
 }
 
 .Button svg{
-    width: var(--Footer__Input-Button-Svg-Arrow-Size);
-    height: var(--Footer__Input-Button-Svg-Arrow-Size);
+    width:  1.9rem;
+    height:  1.9rem;
     fill: var(--color-white);
 }

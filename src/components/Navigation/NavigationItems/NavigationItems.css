@@ -21,6 +21,11 @@
     grid-row: 1 / 2;
 }
 
+.Navigation__icons li,
+.Navigation__items li{
+    cursor: pointer;
+}
+
 .Navigation__items li:not(:last-child) {
     margin-right: var(--toolbar-navigation-items-right-margin);
 }

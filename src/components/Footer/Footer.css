@@ -1,52 +1,51 @@
 .Site-footer{
-    background-color: var(--Footer__Background-Color);
+    background-color: var(--color-black);
     color: var(--color-white);
 }
 
 .Site-footer__content{
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: var(--Footer__Content-Columns-Template);
+    grid-template-columns: 1fr 1fr;
+    padding: 10rem 0;
+    position: relative;
 }
 
-.Site-footer__social, .Site-footer__nav{
-    padding: var(--Footer__Content-Social-Nav-Padding);
+.Site-footer__content::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-right: 2px solid var(--color-white);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /*Left Side*/
-.Site-footer__social{
-    border-right: .1rem solid var(--color-white);
-}
-
 .Site-footer__social__content{
     display: grid;
-    row-gap: var(--Footer__Content-Social-Gap);
+    row-gap: 2rem;
 }
 
 .Site-footer__social__icons{
     display: flex;
     align-items: flex-end;
-    margin-left: var(--Footer__Social-Icons-Margin-Left);
+    margin-left: 1rem;
 }
 
 .Site-footer__social__icons svg{
     fill: currentColor;
-    width: var(--Footer__Content-Social-Icons-Size);
-    height: var(--Footer__Content-Social-Icons-Size);
-}
-
-.Site-footer__content-line{
-    grid-column: 2 / 3;
-    height: 100%;
-    border-right: .1rem solid var(--color-white);
+    width: 2rem;
+    height: 2rem;
 }
 
 .Site-footer__social__icons li:not(:last-child) {
-    margin-right: var(--Footer__Content-Social-Margin-Right);
+    margin-right: 1rem;
 }
 /*************** Right Side *****************/
+
 .Site-footer__nav{
-    grid-column: 3 / 4;
+    align-self: center;
 }
 
 .Site-footer__nav__menu{
@@ -55,14 +54,14 @@
 }
 
 .Site-footer__nav__menu-links li{
-    margin-top: var(--Footer__Nav-Menu-Links-margin-Top);
+    margin-top: 1.4rem;
 }
 /*************** Bottom Side *****************/
 .Site-footer__bottom{
-    padding: var(--Footer__Bottom-Padding);
+    padding: 1.5rem;
     grid-column: Full-Start / Full-End;
     display: grid;
-    grid-template-columns: var(--Footer__Bottom-Columns-Template);
+    grid-template-columns: minmax(2rem, 8rem) minmax(max-content, 1fr) minmax(2rem, 8rem);
     border-top: .1rem solid var(--color-white);
 }
 

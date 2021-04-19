@@ -4,13 +4,19 @@ import { NavLink } from 'react-router-dom';
 import classes from './Toolbar.module.css';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import Likes from '../../../containers/Likes/Likes';
+import Likes from '../../LikesList/LikesList';
+import ShoppingCart from '../../ShoppingCart/ShoppingCart';
 
 const Toolbar = (props) => {
-    const [likeState, setLikeState] = useState(false);
+    const [likesVisibility, setLikesVisibility] = useState(false);
+    const [cartVisibility, setCartVisibility] = useState(false);
 
     const likeIconBtnClickedHandler = () => {
-        setLikeState(!likeState);
+        setLikesVisibility(!likesVisibility);
+    }
+
+    const cartVisibilityHandler = () => {
+        setCartVisibility(!cartVisibility);
     }
 
     return (
@@ -26,11 +32,12 @@ const Toolbar = (props) => {
                 <NavigationItems
                     className={classes.Navigation}
                     likeBtnClicked={likeIconBtnClickedHandler}
-                    likeState={likeState}
+                    likeIconState={likesVisibility}
+                    cartIconClicked={cartVisibilityHandler}
                 />
             </nav>
-
-            <Likes likeState={likeState} closeBtnHandler={likeIconBtnClickedHandler} />
+            <Likes likeState={likesVisibility} closeBtnHandler={likeIconBtnClickedHandler} />
+            <ShoppingCart visible={cartVisibility} cartVisibilityRemove={cartVisibilityHandler} />
         </header>
     )
 };

@@ -5,7 +5,7 @@ import CustomerRating from './CustomerRating/CustomerRating';
 import Card from '../../../../components/UI/Card/Card';
 
 const FeedbackSection = props => (
-    <section className="Feedback_Section">
+    <section className="Feedback_Section section--hidden">
         <div className="Feedback_Section__Content">
             <CustomerRating />
             <h2 className="Feedback_Section__Title">The best Orthopedic Sneakers <br /> High-Quality Fabrics</h2>
@@ -15,7 +15,7 @@ const FeedbackSection = props => (
             </p>
             <div className="Feedback_Section__Cards">
                 <Card
-                    userImgUrl="user_1.jpg"
+                    userImgUrl="./images/IndexPage/FeedbackSection/Users/3x/user_1.jpg"
                     name="Brittany B."
                     title="My Daughter loves her sneakers!"
                     text_content=" My 9 year old Sarah is very happy to wear such
@@ -23,7 +23,7 @@ const FeedbackSection = props => (
                 For us buying new shoes for our daugher is very difficult
                 but here we can find everything we need."/>
                 <Card
-                    userImgUrl="user_2.jpg"
+                    userImgUrl="./images/IndexPage/FeedbackSection/Users/3x/user_2.jpg"
                     name="Shirley T."
                     title="Husband loves his t-shirt"
                     text_content=" My 9 year old Sarah is very happy to wear such
@@ -31,7 +31,7 @@ const FeedbackSection = props => (
                 For us buying new shoes for our daugher is very difficult
                 but here we can find everything we need."/>
                 <Card
-                    userImgUrl="user_3.jpg"
+                    userImgUrl="./images/IndexPage/FeedbackSection/Users/3x/user_3.jpg"
                     name="Michael C."
                     title="My new sneakers look very cool"
                     text_content=" My 9 year old Sarah is very happy to wear such

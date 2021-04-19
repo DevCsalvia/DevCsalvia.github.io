@@ -1,0 +1,163 @@
+.Product-Details-Wrapper{
+    background-color: var(--color-light-grey);
+    /* for position sticky */
+    margin: calc(var(--toolbar-height) * -1) 0 var(--toolbar-height) 0;
+    transform: translateY(var(--toolbar-height));
+}
+
+/*///////////////////////////////////////////////////*/
+/************* Left Side ***************/
+.Product-Details__Content{
+    grid-column: 2 / 3;
+    padding: 5.8rem;
+    display: grid;
+    grid-template-columns: 1fr 43.2rem;
+    grid-template-rows: auto;
+    grid-column-gap: 5.8rem;
+}
+
+.Product-Details__Content__imgs-block{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.Product-Details__Content__img{
+    height: 55rem;
+}
+
+.Product-Details__Content__img img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*///////////////////////////////////////////////////*/
+/* Right Side Content*/
+.Product-Details__Content__product-props{
+    display: grid;
+    align-self: start;
+    row-gap: 1rem;
+    position: sticky;
+    top: 1rem;
+}
+
+.Product-Details__Content__product-name, .Product-Details__Content__product-price{
+    font-family: 'Lato', sans-serif;
+    font-size: var(--Heading-Font-Size-Secondary);
+    font-weight: 600;
+}
+
+.Product-Details__Content__product-price{
+
+}
+
+.Product-Details__Content__product-stars{
+    display: flex;
+    align-items: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+}
+
+.Product-Details__Content__product-stars span{
+  
+}
+
+/*///////////////////////////////////////////////////*/
+/* Right Side SIZE GRID*/
+.Product-Details__Content__product-size{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.Product-Details__Content__product-status{
+    font-size: var(--Default-Font-Size-2);
+}
+
+.Product-Details__Content__product-size-grid{
+    display: grid;
+    gap: .1rem;
+    grid-template-columns: repeat(auto-fit, 6rem);
+}
+
+.Product-Details__Content__product-size-grid__Label{
+    width: 6rem;
+    height: 5rem;
+    cursor: pointer;
+    border: .1rem solid var(--color-grey);
+    border-radius: .3rem;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+    user-select: none;
+}
+
+.Product-Details__Content__product-size-grid__Label input{
+    display: none;
+}
+
+.Product-Details__Content__product-size-grid__Label:hover{
+    border: .1rem solid var(--color-dark-grey);
+}
+
+.Product-Details__Content__product-size-grid__Label--Checked{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/*///////////////////////////////////////////////////*/
+/* Right Side BUTTONS HEART/ADD */
+.Product-Details__Content__product-props__Buttons-Wrapper{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.Product-Details__Content__product-props__Heart-Btn{
+    border: .1rem solid var(--color-dark-grey);
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+}
+
+.Product-Details__Content__product-props__Heart-Btn svg{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+/*BOTTOM BLOCK*/
+.Product-Details__Content__Reviews{
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 2rem;
+    background-color: var(--color-white);
+    padding: 4rem 0;
+}
+
+.Product-Details__Content__Reviews__Text-block{
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+.Product-Details__Content__Reviews__Text-block > span {
+    font-size: var(--Heading-Font-Size-Secondary);
+    font-weight: 600;
+}
+
+.Product-Details__Content__Reviews__Text-block > div{
+    display: flex;
+    align-items: center;
+}
+
+.Product-Details__Content__Reviews__Text-block > div span{
+    margin-left: 1rem;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+}

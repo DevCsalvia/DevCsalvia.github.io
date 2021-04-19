@@ -1,1 +1,14 @@
 @import './typography.css';
+
+section {
+    transition: transform .8s, opacity .8s;
+}
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(6rem);
+}
+
+.lazy-img {
+    filter: blur(10px);
+  }

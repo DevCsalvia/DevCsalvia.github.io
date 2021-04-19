@@ -1,15 +1,34 @@
+import { useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
+import * as actions from '../../store/actions/index';
 
 import './LikesList.css';
 import Like from './Like/Like';
 
 const LikesList = (props) => {
+    /* Hooks Way to work with Redux Dispatch(useDispatch) and Get Access To Redux Store(useSelector) */
+    const dispatch = useDispatch();
+
+    const likes = useSelector(state => state.like.likes);
+
+    /* Likes Functionality useCallback is used to not to recreate function inside*/
+    const onInitLikes = useCallback(
+        () => dispatch(actions.initLikes()),
+        [dispatch]
+    );
+
+    /* Likes Initializing from LocalStorage*/
+    useEffect(() => {
+        onInitLikes();
+    }, [onInitLikes]);
 
     let likesListMarkup = [];
 
-    if (props.likesArray) props.likesArray.map(item => likesListMarkup.push(<Like
+    if (likes) likes.map(item => likesListMarkup.push(<Like
         productId={item.id}
-        imgUrl={item.imgUrl}
+        imgUrl={`${item.category}/${item.imgUrl}`}
+        category={item.category}
         title={item.title}
         name={item.name}
         price={item.price}
@@ -23,22 +42,6 @@ const LikesList = (props) => {
             </div>
             <ul className="LikesList">
                 {likesListMarkup}
-                {/* <Like imgClass={'item_1_1_jpg'}
-                    title="FOOTWEAR"
-                    name="SILVER WILD TRAINER (MEN'S)"
-                    price="4399руб" />
-                <Like imgClass={'item_1_1_jpg'}
-                    title="FOOTWEAR"
-                    name="SILVER WILD TRAINER (MEN'S)"
-                    price="4399руб" />
-                <Like imgClass={'item_1_1_jpg'}
-                    title="FOOTWEAR"
-                    name="SILVER WILD TRAINER (MEN'S)"
-                    price="4399руб" />
-                <Like imgClass={'item_1_1_jpg'}
-                    title="FOOTWEAR"
-                    name="SILVER WILD TRAINER (MEN'S)"
-                    price="4399руб" /> */}
             </ul>
         </div>
     );

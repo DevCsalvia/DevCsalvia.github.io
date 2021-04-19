@@ -32,7 +32,6 @@ const Footer = props => (
                 </div>
 
             </section>
-            <div className="Site-footer__content-line"></div>
             <section className="Site-footer__nav">
                 <nav>
                     <ul className="Site-footer__nav__menu">

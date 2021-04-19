@@ -8,9 +8,15 @@
 
     --Default-Font-Size-2: 1.2rem;
 
+    --Default-Font-Size-3: 1rem;
+
     --Header-Heading-Font-Size: 6rem;
 
+    --Header-Heading-Font-Size-2: 5.4rem;
+
     --Default-Heading-Font-Size: 3.6rem;
+
+    --Heading-Font-Size-Secondary: 2.8rem;
 
     --Footer-Heading-Font-Size: 2.4rem;
 }

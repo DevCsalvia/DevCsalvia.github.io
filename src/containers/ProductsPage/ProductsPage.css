@@ -1,10 +1,13 @@
 .Products-Wrapper{
 }
 
+/*////////////////////////////////////////////*/
+/*IMG STYLING*/
 .Products__Top-Img{
-    width: var(--Products-Top-Img-Width);
-    height: var(--Products-Top-Img-Height);
+    width: 100%;
+    height: 25rem;
     grid-column: 1 / -1;
+    position: relative;
 }
 
 .Products__Top-Img img{
@@ -14,21 +17,88 @@
     object-position: 50% 0%;
 }
 
+.Products__Top-Img__Text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: var(--Header-Heading-Font-Size-2);
+    font-weight: 500;
+    text-shadow:
+    -1px -1px 0 var(--color-black),  
+        1px -1px 0 var(--color-black),
+        -1px 1px 0 var(--color-black),
+        1px 1px 0 var(--color-black);
+    color: var(--color-white);
+}
+
+/*////////////////////////////////////////////*/
+/*CONTENT*/
 .Products__Content{
     grid-column: center-start / center-end;
     display: grid;
-    row-gap: var(--Products-Content-Row-Gap);
-    padding: var(--Products-Content-Padding);
+    padding: 2rem 0;
+    row-gap: 1rem;
+}
+
+.Products__Content > section{
+    margin-bottom: 4rem;
 }
 
 .Products__Content__heading{
     font-size: var(--Default-Heading-Font-Size);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/*////////////////////////////////////////////*/
+/*CATEGORIES*/
+.Products__Categories{
+    display: flex;
+    justify-content: center;
+    font-size: var(--Under-Head-Font-size);
+    color: var(--color-dark-grey-1);
+}
+
+.Products__Categories li{
+    position: relative;
+}
+
+.Products__Categories a::after{
+    content: '';
+    display: none;
+    position: absolute;
+    top: calc(100% + .5rem);
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--color-black);
+}
+
+
+.Products__Categories a:hover{
+    color: var(--color-black);
+}
+
+.Products__Categories .active::after,
+.Products__Categories a:hover::after{
+    display: block;
+}
+
+.Products__Categories li:nth-child(2) {
+    margin: 0 2rem;
+}
+
+/*////////////////////////////////////////////*/
+/*LIST*/
+.Products__Bestsellers{
+   
 }
 
 .Products__List{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     justify-content: center;
-    grid-column-gap: var(--Products-List-Column-Gap);
-    grid-row-gap: var(--Products-List-Row-Gap);
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin-top: 2rem; /* Or do it with grid */
 }

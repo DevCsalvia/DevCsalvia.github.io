@@ -4,11 +4,11 @@ import './Button.css';
 
 const Button = props => {
     return (
-        <div className={'Button ' + props.addClass}>
-            <NavLink
+        <button disabled={props.disabled} style={{ padding: props.link ? 0 : '' }} className={`Button${(props.addClass) ? ' ' + props.addClass : ''}`}>
+            {props.link ? <NavLink
                 exact={props.exact}
-                to={props.link}>{props.children}</NavLink>
-        </div>
+                to={props.link}>{props.children}</NavLink> : props.children}
+        </button>
 
     );
 }

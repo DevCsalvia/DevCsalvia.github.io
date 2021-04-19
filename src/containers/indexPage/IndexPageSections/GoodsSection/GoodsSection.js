@@ -5,7 +5,7 @@ import "./GoodsSection.css";
 import Button from '../../../../components/UI/Button/Button';
 
 const GoodsSection = props => (
-    <section className="Goods-Section">
+    <section className="Goods-Section section--hidden">
         <div className="Goods-Section__Content">
             <div className="Goods-Section__Content-First">
                 <div className="Goods-Section__Content-Text">
@@ -23,7 +23,11 @@ const GoodsSection = props => (
                     <Button addClass="Button--Border-Black" link="/products">Shop Now</Button>
                 </div>
                 <div className="Goods-Section__Content__Img">
-                    <img src="./images/IndexPage/GoodsSection/good-1.jpg" alt="PRODUCT" />
+                    <img
+                        className="lazy-img"
+                        src="./images/IndexPage/GoodsSection/4x/good-1.jpg"
+                        data-src="./images/IndexPage/GoodsSection/2x/good-1.jpg"
+                        alt="PRODUCT" />
                 </div>
             </div>
             <div className="Goods-Section__Content-Second">
@@ -42,7 +46,11 @@ const GoodsSection = props => (
                     <Button addClass="Button--Border-Black" link="/products">Shop Now</Button>
                 </div>
                 <div className="Goods-Section__Content__Img">
-                    <img src="./images/IndexPage/GoodsSection/good-2.jpg" alt="PRODUCT" />
+                    <img
+                        className="lazy-img"
+                        src="./images/IndexPage/GoodsSection/4x/good-2.jpg"
+                        data-src="./images/IndexPage/GoodsSection/2x/good-2.jpg"
+                        alt="PRODUCT" />
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ const Card = props => {
         <div className={classes.Card_Wrapper}>
             <div className={classes.Card_User}>
                 <div className={classes.Card_User__Img}>
-                    <img src={`./images/IndexPage/FeedbackSection/Users/${props.userImgUrl}`} alt="USER" />
+                    <img src={props.userImgUrl} alt="USER" />
                 </div>
                 {props.name}
             </div>

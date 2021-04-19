@@ -1,73 +1,31 @@
+
 import Slider from '../../../../components/UI/Slider/Slider';
 
 // My components
-import Button from '../../../../components/UI/Button/Button';
+import HeaderSectionSlide from './HeaderSectionSlide/HeaderSectionSlide';
 
 // My css
 import "./HeaderSection.css";
 
-const HeaderSection = props => (
-    <section>
-        <Slider dots={true} infinite={true} autoplay={false}>
-            <div className="Header-Section__Slide Header-Section__Slide_1">
-                <div className="Header-Section__Slide__Img">
-                    <img src="./images/IndexPage/SliderImages/item_2.jpg" alt="" />
-                </div>
-                <div className="Header-Section__Slide__Content">
-                    <span>COMFORT IS WHAT <br /> DEFINES US</span>
-                    <h3>
-                        #IAMRUNNER
-                    </h3>
-                    <Button link="#">
-                        Watch Now
-                        </Button>
-                </div>
-            </div>
-            <div className="Header-Section__Slide Header-Section__Slide_2">
-                <div className="Header-Section__Slide__Img">
-                    <img src="./images/IndexPage/SliderImages/item_3.2.jpg" alt="" />
-                </div>
-                <div className="Header-Section__Slide__Content">
-                    <span>MORE THAN <br /> INFLUENCERS</span>
-                    <h3>
-                        #IAMRUNNER
-                    </h3>
-                    <Button link="#">
-                        Watch Now
-                        </Button>
-                </div>
-            </div>
-            <div className="Header-Section__Slide Header-Section__Slide_3">
-                <div className="Header-Section__Slide__Img">
-                    <img src="./images/IndexPage/SliderImages/item_7.1.jpg" alt="" />
-                </div>
-                <div className="Header-Section__Slide__Content">
-                    <span>NEW <br /> ARRIVALS</span>
-                    <h3>
-                        #IAMRUNNER
-                    </h3>
-                    <Button link="#">
-                        Watch Now
-                        </Button>
-                </div>
-            </div>
-            <div className="Header-Section__Slide Header-Section__Slide_4">
-                <div className="Header-Section__Slide__Img">
-                    <img src="./images/IndexPage/SliderImages/item_9.1.jpg" alt="" />
-                </div>
-                <div className="Header-Section__Slide__Content">
-                    <span>ARTISTS FOR <br /> HUMANITY</span>
-                    <h3>
-                        #IAMRUNNER
-                    </h3>
-                    <Button link="#">
-                        Watch Now
-                        </Button>
-                </div>
-            </div>
-        </Slider>
-    </section>
+const HeaderSection = props => {
+    const sliderData = [
+        { imgUrl: 'item_2.jpg', title: <span>COMFORT IS WHAT <br /> DEFINES US</span>, hashTag: '#IAMRUNNER', btnTitle: 'Watch Now' },
+        { imgUrl: 'item_3.2.jpg', title: <span>MORE THAN <br /> INFLUENCERS</span>, hashTag: '#IAMRUNNER', btnTitle: 'Watch Now' },
+        { imgUrl: 'item_7.1.jpg', title: <span>NEW <br /> ARRIVALS</span>, hashTag: '#IAMRUNNER', btnTitle: 'Watch Now', addClass: 'Header-Section__Slide_3' },
+        { imgUrl: 'item_9.1.jpg', title: <span>ARTISTS FOR <br /> HUMANITY</span>, hashTag: '#IAMRUNNER', btnTitle: 'Watch Now' }
+    ];
+    // Array where we will store slider items html
+    const slidesMarkup = [];
+    sliderData.forEach((item, index) => {
+        slidesMarkup.push(<HeaderSectionSlide addClass={item.addClass} key={index} imgUrl={item.imgUrl} title={item.title} hashTag={item.hashTag} btnTitle={item.btnTitle} />);
+    });
 
-);
+    return (
+        <section>
+            <Slider dots={true} infinite={true} autoplay={false}>
+                {slidesMarkup}
+            </Slider>
+        </section>);
+};
 
 export default HeaderSection;

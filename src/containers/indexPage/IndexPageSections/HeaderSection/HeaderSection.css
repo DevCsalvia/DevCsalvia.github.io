@@ -2,6 +2,16 @@
     /*height of slide*/
     height: var(--Header-Section__Slider-Height);
     grid-template-rows: var(--Header-Section__Slider-Grid-Rows);
+    position: relative;
+}
+
+.Slider .Header-Section__Slide::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .Header-Section__Slide__Img{
@@ -45,5 +55,6 @@
 .Slider .Header-Section__Slide__Content .Button {
     /*top transform of button in slider content*/
     transform: translateY(var(--Header-Section__Slide__Content__Button-TranslateY));
+    justify-self: start;
 }
 
