@@ -1,0 +1,71 @@
+/*////////////////////////////////////////////////////*/
+/*Express Checkout Block*/
+.CheckoutMain__express {
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.CheckoutMain__express_title{
+    align-self: center;
+
+    transform: translateY(50%);
+    background-color: var(--color-white);
+
+    padding: 0 1rem;
+
+    font-size: var(--Default-Font-Size-1);
+    font-weight: 400;
+}
+
+.CheckoutMain__express__buttons_wrapper{
+
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    column-gap: 1rem;
+
+    padding: 2rem 1rem;
+
+    border: 1px solid var(--color-light-grey-3);
+    border-radius: .5rem;
+}
+
+.CheckoutMain__express__buttons_wrapper > div{
+    width: 12rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(1) {
+   background-color: #ffc439;
+}
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(2) {
+    background-color: var(--color-black);
+}
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(3) svg{
+    height: 6rem;
+}
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(3) {
+    background-color: #33CDB3;
+ }
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(4) {
+    background-color: #FEEA7E  ;
+}
+
+.CheckoutMain__express__buttons_wrapper > div:nth-child(4) svg{
+    height: 2.5rem;
+}
+
+.CheckoutMain__express__buttons_wrapper > div svg{
+    height: 2rem;
+}

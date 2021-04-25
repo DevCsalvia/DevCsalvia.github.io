@@ -1,0 +1,19 @@
+.ProductDetailsWrapper{
+    background-color: var(--color-light-grey);
+    /* for position sticky */
+    margin: calc(var(--toolbar-height) * -1) 0 var(--toolbar-height) 0;
+    transform: translateY(var(--toolbar-height));
+}
+
+/*///////////////////////////////////////////////////*/
+/************* Left Side ***************/
+.ProductDetails__Content{
+    grid-column: 2 / 3;
+    padding: 5.8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 43.2rem;
+    grid-template-rows: auto;
+    grid-column-gap: 5.8rem;
+}
+
+

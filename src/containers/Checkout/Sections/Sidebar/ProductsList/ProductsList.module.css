@@ -1,0 +1,10 @@
+/*///////////////////////////////////////////////////*/
+/*List Styles*/
+.Products_list__wrapper{
+    
+}
+
+.Products_list{
+    display: grid;
+    row-gap: 1rem;
+}

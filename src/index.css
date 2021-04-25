@@ -1,5 +1,1 @@
-@import "./baseCss/abstracts/indexVariables.css";
-@import "./baseCss/base/animations.css";
-@import "./baseCss/base/base.css";
-@import "./baseCss/base/baseGridTemplate.css";
-@import "./baseCss/base/utility.css";
+@import './baseCss/main.css';

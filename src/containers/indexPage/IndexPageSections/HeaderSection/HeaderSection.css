@@ -1,7 +1,7 @@
 .Slider .Header-Section__Slide {
     /*height of slide*/
-    height: var(--Header-Section__Slider-Height);
-    grid-template-rows: var(--Header-Section__Slider-Grid-Rows);
+    height: calc(100vh - 8rem);
+    grid-template-rows: 12rem min-content;
     position: relative;
 }
 
@@ -40,7 +40,7 @@
     grid-row: 2 / -1;
     display: grid;
     justify-content: start;
-    row-gap: var(--Header-Section__Slide__Content-Row-Gap);
+    row-gap: .4rem;
     grid-template-rows: repeat(3, max-content);
     animation: moveInBottom .4s linear forwards;
 }
@@ -54,7 +54,7 @@
 
 .Slider .Header-Section__Slide__Content .Button {
     /*top transform of button in slider content*/
-    transform: translateY(var(--Header-Section__Slide__Content__Button-TranslateY));
+    transform: translateY(2.4rem);
     justify-self: start;
 }
 

@@ -1,0 +1,44 @@
+/*///////////////////////////////////////////////////*/
+/* Right Side SIZE GRID*/
+.ProductDetails__Content__ProductSize{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.ProductDetails__Content__Product_Status{
+    font-size: var(--Default-Font-Size-2);
+}
+
+.ProductDetails__Content__ProductSizesGrid{
+    display: grid;
+    gap: .1rem;
+    grid-template-columns: repeat(auto-fit, 6rem);
+}
+
+.ProductDetails__Content__ProductSizesGrid__Label{
+    width: 6rem;
+    height: 5rem;
+    cursor: pointer;
+    border: .1rem solid var(--color-grey);
+    border-radius: .3rem;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+    user-select: none;
+}
+
+.ProductDetails__Content__ProductSizesGrid__Label input{
+    display: none;
+}
+
+.ProductDetails__Content__ProductSizesGrid__Label:hover{
+    border: .1rem solid var(--color-dark-grey);
+}
+
+.ProductDetails__Content__ProductSizesGrid__LabelChecked{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

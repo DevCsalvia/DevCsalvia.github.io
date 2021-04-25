@@ -1,0 +1,6 @@
+@import './abstracts/variables/colorsVar.css';
+@import './abstracts/variables/typographyVar.css';
+@import './base/animations.css';
+@import './base/base.css';
+@import './base/baseGridTemplate.css';
+@import './base/utility.css';

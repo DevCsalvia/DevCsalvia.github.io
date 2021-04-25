@@ -5,11 +5,12 @@ export {
 } from './like';
 export {
     initProducts,
+    clearProductsObject,
     initBestsellerProducts,
     setProducts,
     getProduct,
     setProduct,
-    removeProduct,
+    clearProduct,
     fetchProductsFailed
 } from './product'
 export {
@@ -17,5 +18,7 @@ export {
     setCartItems,
     initCartItems,
     fetchCartItemsFailed,
-    removeCartItem
+    removeCartItem,
+    cartItemAmountChange,
+    clearCartData
 } from './cart'

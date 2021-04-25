@@ -9,7 +9,7 @@ const initialState = {
 const persistData = (likesArray) => localStorage.setItem('likes', JSON.stringify(likesArray));
 
 const addLike = (state, action) => {
-    const updatedLikes = [...state.likes, action.like];//Adding Like Is It immutable
+    const updatedLikes = [action.like, ...state.likes];//Adding Like Is It immutable
     const updatedState = { likes: updatedLikes, };
 
     // Persist data in localStorage

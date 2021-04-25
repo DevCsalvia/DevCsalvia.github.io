@@ -1,0 +1,11 @@
+/*////////////////////////////////////////////*/
+/*LIST*/
+.Products__Section{
+    margin-bottom: 4rem;
+}
+
+.Products__Content__heading{
+    font-size: var(--Heading-Font-Size-3);
+    font-weight: 500;
+    text-transform: capitalize;
+}

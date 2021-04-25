@@ -5,27 +5,27 @@
 /*Dots styling*/
 #Dots__Wrapper{
     /*to position dots from top*/
-    top: var(--Slider-Dots__Top-Position);
+    top: calc(100% - 2.4rem);
     animation: moveInBottom .4s linear forwards;
 }
 
 #Dots__List li {
     /*dots right margin*/
-    margin-right: var(--Slider-Dots__Margin-Right);
+    margin-right: 1rem;
     overflow: hidden;
-    height: var(--Slider-Dots__Height);
-    width: var(--Slider-Dots__Width);
-    border: var(--Slider-Dots__Border-Style);
-    border-radius: var(--Slider-Dots__Border-Radius);
+    height: .7rem;
+    width: 9rem;
+    border: .1rem solid var(--color-black);
+    border-radius: 4rem;
 }
 
 #Dots__List button::before{
-    height: var(--Slider-Dots__Height);
-    width: var(--Slider-Dots__Width);
+    height: .7rem;
+    width: 9rem;
 }
 
 #Dots__List .slick-active button::after {
-    animation: dots-background-filling var(--Slider-Dots__Animation-Duration) cubic-bezier(0, 0, 0.76, 0.77) forwards;
+    animation: dots-background-filling 2s cubic-bezier(0, 0, 0.76, 0.77) forwards;
 }
 
 #Dots__List li button::after {
@@ -36,6 +36,6 @@
     top: 0;
     left: 0;
     background-color: var(--color-black);
-    height: var(--Slider-Dots__Height);
-    width: var(--Slider-Dots__Width);
+    height: .7rem;
+    width: 9rem;
 }

@@ -10,13 +10,17 @@
 
     --Default-Font-Size-3: 1rem;
 
-    --Header-Heading-Font-Size: 6rem;
+    --Heading-Font-Size-1: 6rem;
 
-    --Header-Heading-Font-Size-2: 5.4rem;
+    --Heading-Font-Size-2: 5.4rem;
 
-    --Default-Heading-Font-Size: 3.6rem;
+    --Heading-Font-Size-3: 3.6rem;
 
-    --Heading-Font-Size-Secondary: 2.8rem;
+    --Heading-Font-Size-4: 2.8rem;
 
-    --Footer-Heading-Font-Size: 2.4rem;
+    --Heading-Font-Size-5: 2.4rem;
+
+    --Heading-Font-Size-6: 2.2rem;
+
+    --Heading-Font-Size-7: 2rem;
 }

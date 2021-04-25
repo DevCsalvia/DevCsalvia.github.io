@@ -10,9 +10,8 @@
 }
 
 .Navigation__icons svg {
-
-    width: var(--toolbar-navigation-icons-size);
-    height: var(--toolbar-navigation-icons-size);
+    width: 2rem;
+    height: 2rem;
 }
 
 .Navigation__icons {
@@ -27,9 +26,9 @@
 }
 
 .Navigation__items li:not(:last-child) {
-    margin-right: var(--toolbar-navigation-items-right-margin);
+    margin-right: 4rem;
 }
 
 .Navigation__icons li:not(:last-child) {
-    margin-right: var(--toolbar-navigation-icons-right-margin);
+    margin-right: 2rem;
 }

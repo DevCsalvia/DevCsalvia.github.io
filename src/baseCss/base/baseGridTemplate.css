@@ -1,10 +1,10 @@
-.Toolbar, .Header-Section__Slide, .Product-Details-Wrapper {
+.Toolbar, .Header-Section__Slide, .ProductDetailsWrapper {
     /*Important is here to overwrite style attribute inline-block in slider*/
     display: grid !important;
     grid-template-columns: minmax(2rem, 8rem) minmax(max-content, 1fr) minmax(2rem, 8rem);
 }
 
-.Feedback_Section, .Goods-Section, .Site-footer, .Products-Wrapper {
+.Feedback_Section, .Goods-Section, .Site-footer, .Products_Wrapper, .checkout {
     display: grid;
     grid-template-columns: [Full-Start] minmax(2rem, 26rem)[center-start] minmax(max-content, 1fr) [center-end]minmax(2rem, 26rem) [Full-End];
 }

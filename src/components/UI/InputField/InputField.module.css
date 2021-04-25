@@ -1,0 +1,12 @@
+.input_field {
+    padding: 1.2rem .8rem;
+    outline: none;
+    border: 2px solid var(--color-light-grey-5);
+    border-radius: .6rem;
+    font-size: var(--Default-Font-Size-2);
+    transition: all .2s ease-out;
+}
+
+.input_field:focus{
+    border-color: var(--color-light-grey-4);
+}

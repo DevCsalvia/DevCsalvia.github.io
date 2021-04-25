@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--Customers_Rating-Block__Padding);
-    border-radius: var(--Customers_Rating-Block__Border-Radius);
-    border: var(--Customers_Rating-Block__Border);
-    background-color: var(--Customers_Rating-Block__Background-Color);
+    padding: 2rem 0;
+    border-radius: .4rem;
+    border: .1rem solid var(--color-black);
+    background-color: var(--color-light-grey);
 }
 
 .Rating_Wrapper .Rating_Stars svg {
-    width: var(--Customers_Rating-Block__Star-Size);
-    height: var(--Customers_Rating-Block__Star-Size);
+    width: 1.8rem;
+    height: 1.8rem;
 }

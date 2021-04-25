@@ -25,14 +25,9 @@ const LikesList = (props) => {
 
     let likesListMarkup = [];
 
-    if (likes) likes.map(item => likesListMarkup.push(<Like
-        productId={item.id}
-        imgUrl={`${item.category}/${item.imgUrl}`}
-        category={item.category}
-        title={item.title}
-        name={item.name}
-        price={item.price}
-        key={item.id} />));
+    if (likes) likesListMarkup = likes.map(item => <Like
+        itemData={item}
+        key={item.id} />);
 
     return (
         <div className={`LikesList__Wrapper ${props.likeState ? 'LikesList__Wrapper--Visibility' : ''} `}>

@@ -1,19 +1,5 @@
 import * as actionTypes from './actionTypes';
 
-export const setProducts = (products, category) => {
-    return {
-        type: actionTypes.SET_PRODUCTS,
-        products: products,
-        category: category
-    }
-}
-
-export const fetchProductsFailed = () => {
-    return {
-        type: actionTypes.FETCH_PRODUCTS_FAILED
-    }
-}
-
 export const initProducts = (productsCategory) => {
     return {
         type: actionTypes.INITIATE_PRODUCTS,
@@ -21,9 +7,23 @@ export const initProducts = (productsCategory) => {
     };
 }
 
+export const clearProductsObject = () => {
+    return {
+        type: actionTypes.CLEAR_PRODUCTS_OBJECT
+    }
+}
+
 export const initBestsellerProducts = () => {
     return {
         type: actionTypes.INITIATE_BESTSELLER_PRODUCT
+    }
+}
+
+export const setProducts = (products, category) => {
+    return {
+        type: actionTypes.SET_PRODUCTS,
+        products: products,
+        category: category
     }
 }
 
@@ -42,8 +42,14 @@ export const setProduct = (product) => {
     };
 }
 
-export const removeProduct = () => {
+export const clearProduct = () => {
     return {
-        type: actionTypes.REMOVE_PRODUCT
+        type: actionTypes.CLEAR_PRODUCT
+    }
+}
+
+export const fetchProductsFailed = () => {
+    return {
+        type: actionTypes.FETCH_PRODUCTS_FAILED
     }
 }

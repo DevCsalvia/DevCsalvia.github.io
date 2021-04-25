@@ -1,11 +1,11 @@
 .Goods-Section{
-    padding: var(--Goods_Section__Top-Bottom-Padding);
+    padding: 4rem 0;
 }
 
 .Goods-Section__Content{
     grid-column: center-start / center-end;
     display: grid;
-    row-gap: var(--Goods_Section__Row-Gap);
+    row-gap: 4rem;
 }
 
 .Goods-Section__Content .Button{
@@ -14,14 +14,14 @@
 
 .Goods-Section__Content-First, .Goods-Section__Content-Second{
     display: grid;
-    grid-template-columns: var(--Goods_Section__Content-Columns-Template);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: var(--Goods_Section__Content-Column-Gap);
+    column-gap: 4rem;
 }
 
 .Goods-Section__Content-Text{
     display: grid;
-    row-gap: var(--Goods_Section__Text-Gap);
+    row-gap: 2rem;
 }
 
 .Goods-Section__Content__Heading{
@@ -39,10 +39,10 @@
 
 .Goods-Section__Content__Img{
     justify-self: end;
-    width: var(--Goods_Section__Img-Width);
-    height: var(--Goods_Section__Img-Height);
-    border: var(--Goods_Section__Img-Border);
-    border-radius: var(--Goods_Section__Img-Border-Radius);
+    width: 45rem;
+    height: 35rem;
+    border: .2rem solid var(--color-black);
+    border-radius: .3rem;
 }
 
 .Goods-Section__Content__Img img {

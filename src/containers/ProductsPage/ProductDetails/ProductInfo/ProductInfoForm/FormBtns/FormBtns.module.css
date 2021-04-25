@@ -1,0 +1,20 @@
+/*///////////////////////////////////////////////////*/
+/* Right Side BUTTONS HEART/ADD */
+.ProductDetails__Content__ProductProps__ButtonsWrapper{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.ProductDetails__Content__ProductProps__Heart_Btn{
+    border: .1rem solid var(--color-dark-grey);
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+}
+
+.ProductDetails__Content__ProductProps__Heart_Btn svg{
+    height: 2.4rem;
+    width: 2.4rem;
+}

@@ -3,5 +3,5 @@
 }
 
 .StarsBlock > div:not(:last-child) {
-    margin-right: var(--Stars_Component__Margin-Right);
+    margin-right: .2rem;
 }

@@ -28,7 +28,7 @@ export function* initBestsellerProducts(action) {
 
 export function* getProductSaga(action) {
     try {
-        yield put(actions.removeProduct());
+        yield put(actions.clearProduct());
         const res = yield axios.get(`/products/${action.category}/${action.productId}.json`);
         yield put(actions.setProduct(res.data));
     } catch (error) {

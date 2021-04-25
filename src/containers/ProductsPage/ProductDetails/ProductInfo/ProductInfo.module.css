@@ -1,0 +1,27 @@
+/*///////////////////////////////////////////////////*/
+/* Right Side Content*/
+.ProductDetails__Content__PropsWrapper{
+    display: grid;
+    align-self: start;
+    row-gap: 1rem;
+    position: sticky;
+    top: 1rem;
+}
+
+.ProductDetails__Content__Product_Name, .ProductDetails__Content__Product_Price{
+    font-family: 'Lato', sans-serif;
+    font-size: var(--Heading-Font-Size-4);
+    font-weight: 600;
+}
+
+.ProductDetails__Content__Product_Price{
+
+}
+
+.ProductDetails__Content__Product__Stars{
+    display: flex;
+    align-items: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+}

@@ -1,0 +1,32 @@
+/*BOTTOM BLOCK*/
+.ProductDetails__Content__Reviews{
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 2rem;
+    background-color: var(--color-white);
+    padding: 4rem 0;
+}
+
+.ProductDetails__Content__Reviews__TextBlock{
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+.ProductDetails__Content__Reviews__TextBlock > span {
+    font-size: var(--Heading-Font-Size-4);
+    font-weight: 600;
+}
+
+.ProductDetails__Content__Reviews__TextBlock > div{
+    display: flex;
+    align-items: center;
+}
+
+.ProductDetails__Content__Reviews__TextBlock > div span{
+    margin-left: 1rem;
+    font-size: var(--Default-Font-Size-2);
+    font-weight: 400;
+}

@@ -1,0 +1,14 @@
+.ProductDetails__Content__imgs_block{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.ProductDetails__Content__img{
+    height: 55rem;
+}
+
+.ProductDetails__Content__img img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

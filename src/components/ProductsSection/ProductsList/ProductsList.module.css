@@ -1,0 +1,8 @@
+.Products__List{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    justify-content: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin-top: 2rem; /* Or do it with grid */
+}

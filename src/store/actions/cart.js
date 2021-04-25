@@ -32,3 +32,18 @@ export const removeCartItem = (itemId) => {
         id: itemId
     }
 }
+
+export const cartItemAmountChange = (changeType, prevAmount, id) => {
+    return {
+        type: actionTypes.CART_ITEM_AMOUNT_CHANGE,
+        changeType: changeType,
+        prevAmount: prevAmount,
+        itemId: id
+    }
+}
+
+export const clearCartData = () => {
+    return {
+        type: actionTypes.CLEAR_CART_DATA
+    }
+}

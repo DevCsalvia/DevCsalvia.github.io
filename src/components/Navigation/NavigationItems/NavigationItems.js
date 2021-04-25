@@ -24,7 +24,7 @@ const NavigationItems = (props) => (
             <li onClick={props.likeBtnClicked}>
                 {props.likeIconState ? <HeartSvg /> : <HeartOSvg />}
             </li>
-            <NavigationItem link="#"><UserSvg /></NavigationItem>
+            <NavigationItem link="/auth"><UserSvg /></NavigationItem>
             <li onClick={props.cartIconClicked}><BoxSvg /></li>
         </ul>
     </Aux>

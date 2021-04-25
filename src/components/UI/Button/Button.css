@@ -4,7 +4,7 @@
     position: relative;
 
     display: inline-block;
-    border-radius: .2rem;
+    border-radius: .5rem;
     overflow: hidden;
     background-color: var(--color-white);
     font-size: var(--Default-Font-Size);

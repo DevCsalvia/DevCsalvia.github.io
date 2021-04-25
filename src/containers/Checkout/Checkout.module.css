@@ -1,0 +1,10 @@
+.Checkout{
+    overflow-x: hidden;
+}
+
+.Checkout__Content{
+    grid-column: center-start / center-end;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 56% 1fr;
+}
