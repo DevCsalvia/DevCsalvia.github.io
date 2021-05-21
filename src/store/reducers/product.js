@@ -4,7 +4,9 @@ import { updateObject } from '../../shared/utility';
 const initialState = {
     productsObject: {},
     product: null,
+    sectionLoading: false,
     bestsellers: {},
+    bestsellersLoading: false,
     errorBestsellerFetch: false,
     errorSectionFetch: false,
     errorProductFetch: false
@@ -20,6 +22,30 @@ const setProducts = (state, action) => {
                 productsObject: action.products
             })
     );
+}
+
+const fetchProductsStart = (state, action) => {
+    const field = action.productsType === 'bestsellers' ? 'bestsellersLoading' : 'sectionLoading';
+
+    const updateObjectFields = {};
+
+    updateObjectFields[field] = true;
+
+    return (updateObject(state, {
+        ...updateObjectFields
+    }))
+}
+
+const fetchProductsSuccess = (state, action) => {
+    const field = action.productsType === 'bestsellers' ? 'bestsellersLoading' : 'sectionLoading';
+
+    const updateObjectFields = {};
+
+    updateObjectFields[field] = false;
+
+    return (updateObject(state, {
+        ...updateObjectFields
+    }))
 }
 
 const clearProductsObject = (state) => {
@@ -58,6 +84,8 @@ const reducer = (state = initialState, action) => {
         case actionTypes.CLEAR_PRODUCTS_OBJECT: return clearProductsObject(state);
         case actionTypes.SET_PRODUCT: return setProduct(state, action);
         case actionTypes.CLEAR_PRODUCT: return clearProduct(state);
+        case actionTypes.FETCH_PRODUCTS_START: return fetchProductsStart(state, action);
+        case actionTypes.FETCH_PRODUCTS_SUCCESS: return fetchProductsSuccess(state, action);
         case actionTypes.FETCH_PRODUCTS_FAILED: return fetchProductsFailed(state, action);
         default: return state;
     }

@@ -37,6 +37,7 @@
 .List__item_img__block img{
     width: 6.5rem;
     height: 4.5rem;
+    object-fit: cover;
 }
 
 .List__item_content{

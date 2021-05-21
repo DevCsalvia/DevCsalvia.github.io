@@ -61,7 +61,7 @@
 
 /*////////////////////////////////////////////////*/
 /*BUTTON STYLES*/
-.shoppingcart .Button{
+.shoppingcart button{
     justify-self: center;
     width: calc(100% - 4rem);
 
@@ -69,7 +69,7 @@
     font-weight: 500;
 }
 
-.shoppingcart .Button a{
+.shoppingcart button a{
     width: 100%;
     margin: 0 2rem;
 }

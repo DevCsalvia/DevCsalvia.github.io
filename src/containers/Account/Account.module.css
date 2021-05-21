@@ -1,0 +1,15 @@
+.Account{
+
+}
+
+.Account__Content{
+    grid-column: center-start / center-end;
+    padding: 4rem 0 0 0;
+
+    display: grid;
+    grid-template-columns: 35rem 1fr;
+}
+
+.Account__Main{
+    
+}

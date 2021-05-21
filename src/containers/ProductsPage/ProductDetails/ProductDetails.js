@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Aux from '../../../hoc/Auxil/Auxil';
 import * as actions from '../../../store/actions/index';
 
 import classes from './ProductDetails.module.css';
+
+// UI Components
+import Loader from '../../../components/UI/Loader/Loader';
 
 // Details Components
 import ImgsBlock from './ImgsBlock/ImgsBlock';
@@ -18,6 +21,7 @@ const ProductDetails = (props) => {
     ///////////////////////////////////////////////////////////////////////////////
     // Product get functionality
     const product = useSelector(state => state.product.product); //Product Data
+    const loadingAddingItemFlag = useSelector(state => state.cart.loading);
 
     useEffect(() => {
         const query = new URLSearchParams(props.location.search);
@@ -35,7 +39,7 @@ const ProductDetails = (props) => {
     let productMarkup = '';
     if (product) {
         // console.log(product);
-        productMarkup = <div className={classes.ProductDetailsWrapper + ' ' + "ProductDetailsWrapper"}>
+        productMarkup = <div className={classes.ProductDetailsWrapper + ' ProductDetailsWrapper'}>
             <div className={classes.ProductDetails__Content}>
                 <ImgsBlock
                     category={product.category}
@@ -46,7 +50,13 @@ const ProductDetails = (props) => {
             </div>
             <ReviewsBlock />
         </div>
-    } else productMarkup = 'LOADING!';
+    }
+    if (loadingAddingItemFlag || product === null) {
+        productMarkup = <div className={classes.Loader}>
+            <Loader />
+        </div>
+    }
+
 
 
     return (

@@ -1,0 +1,40 @@
+.SidebarList{
+    display: grid;
+    font-size: var(--Default-Font-Size-1);
+    font-weight: 500;
+    row-gap: 1rem;
+    padding: 0 3rem 1rem 0;
+    border-right: 1px solid var(--color-black);
+    align-content: start;
+    height: 100%; 
+}
+/*SHOULD MAKE POSITION STICKY*/
+.SidebarList li:hover:not(.active, :first-child){
+    color: var(--color-grey);
+}
+
+.SidebarList li:first-child{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--Under-Head-Font-size);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.SidebarList li:first-child span{
+    font-size: var(--Default-Font-Size-1);
+    font-weight: 400;
+    color: var(--color-grey);
+}
+
+.SidebarList li:not(:first-child){
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.SidebarList .active{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

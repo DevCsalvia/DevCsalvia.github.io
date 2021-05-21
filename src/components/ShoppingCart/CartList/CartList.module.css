@@ -12,6 +12,13 @@
     row-gap: 2rem;
 }
 
+/*EMPTY TITLE*/
+.ShoppingCart__List__Empty{
+    justify-self: center;
+    font-size: var(--Heading-Font-Size-6);
+    font-weight: 500;
+}
+
 /*CONTINUE BTN STYLES*/
 .ShoppingCart__List__Continue_Btn{
     text-align: center;

@@ -6,9 +6,8 @@
     transform: translateX(calc(-100% - 1rem));
     padding: 1rem 2rem;
     padding-right: 3rem;
-    border: .1rem solid var(--color-black);
     border-top: none;
-    border-radius: .3rem;
+    border-radius: 0 0 .3rem .3rem;
     box-shadow: .2rem 1rem 1rem rgba(0,0,0,0.2);
     max-height: 36rem;
     width: 33rem; /* We Have to consider horizontal padding */
@@ -88,4 +87,11 @@
 		opacity: 1;
 		transform: translateX(calc(-100% - 1rem)) translate(0);
 	}
+}
+
+
+.LikesList__Empty_Title{
+    font-size: var(--Default-Font-Size);
+    font-weight: 500;
+    text-align: center;
 }

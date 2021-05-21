@@ -1,0 +1,10 @@
+.Auth__Login__BtnWrapper{
+    align-self: start;
+    margin-top: 2rem;
+}
+
+.Auth__Login__BtnWrapper span{
+    margin-left: 1rem;
+    font-size: var(--Default-Font-Size-1);
+    cursor: pointer;
+}

@@ -7,7 +7,7 @@ const Like = (props) => {
     return (
         <li className="List__Item">
             <Link className="Likes__link" to={{
-                pathname: `/products/${item.Id}`,
+                pathname: `/products/${item.id}`,
                 search: `category=${item.category}`
             }}>
                 <div className="Likes__img">

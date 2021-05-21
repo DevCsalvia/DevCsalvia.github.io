@@ -11,7 +11,9 @@ import App from './App';
 import likesReducer from './store/reducers/like';
 import productsReducer from './store/reducers/product';
 import cartReducer from './store/reducers/cart';
-import { watchProducts, watchCart } from './store/sagas/rootSaga';
+import orderReducer from './store/reducers/order';
+import authReducer from './store/reducers/auth';
+import { watchProducts, watchCart, watchOrder, watchAuth } from './store/sagas/rootSaga';
 //import reportWebVitals from './reportWebVitals';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
@@ -20,7 +22,9 @@ const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX
 const rootReducer = combineReducers({
   like: likesReducer,
   product: productsReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  order: orderReducer,
+  auth: authReducer
 });
 
 /* MiddleWare What will be used */
@@ -34,6 +38,8 @@ const store = createStore(rootReducer, composeEnhancers(
 /* Run Saga MiddleWare to watch after all actions related to Likes */
 sagaMiddleware.run(watchProducts);
 sagaMiddleware.run(watchCart);
+sagaMiddleware.run(watchOrder);
+sagaMiddleware.run(watchAuth);
 
 const app = (
   <React.StrictMode>

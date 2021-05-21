@@ -7,6 +7,20 @@ export const initProducts = (productsCategory) => {
     };
 }
 
+export const fetchProductsStart = (productsType = '') => {
+    return {
+        type: actionTypes.FETCH_PRODUCTS_START,
+        productsType: productsType
+    }
+}
+
+export const fetchProductsSuccess = (productsType = '') => {
+    return {
+        type: actionTypes.FETCH_PRODUCTS_SUCCESS,
+        productsType: productsType
+    }
+}
+
 export const clearProductsObject = () => {
     return {
         type: actionTypes.CLEAR_PRODUCTS_OBJECT

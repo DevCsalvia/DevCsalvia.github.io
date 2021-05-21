@@ -1,19 +1,19 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import classes from './Sidebar.module.css';
 
 // Components
-import InputField from '../../../../components/UI/InputField/InputField';
+import InputField from '../../../../components/UI/Input/Input';
 import Button from '../../../../components/UI/Button/Button';
 import ProductsList from './ProductsList/ProductsList';
 
 const Sidebar = props => {
-    const [total, setTotal] = useState(0);
+    const totalPrice = useSelector(state => state.cart.totalPrice);
 
     return (
         <section className={classes.Checkout__sidebar}>
             <div className={classes.Checkout__sidebar__content}>
-                <ProductsList setTotal={setTotal} />
+                <ProductsList />
                 <div className={classes.Checkout__sidebar__content__discount}>
                     <form>
                         <InputField type="text" placeholder="Gift card or discount code" />
@@ -28,7 +28,7 @@ const Sidebar = props => {
                 </div>
                 <div className={classes.Checkout__sidebar__content__total}>
                     <span>Total</span>
-                    <span><span>RUB</span> ₽{Number(total).toFixed(2)}</span>
+                    <span><span>RUB</span> ₽{Number(totalPrice).toFixed(2)}</span>
                 </div>
             </div>
         </section>

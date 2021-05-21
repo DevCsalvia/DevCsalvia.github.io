@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 
 import classes from './Toolbar.module.css';
 import Logo from '../../Logo/Logo';
@@ -9,15 +11,12 @@ import ShoppingCart from '../../ShoppingCart/ShoppingCart';
 
 const Toolbar = (props) => {
     const [likesVisibility, setLikesVisibility] = useState(false);
-    const [cartVisibility, setCartVisibility] = useState(false);
 
     const likeIconBtnClickedHandler = () => {
         setLikesVisibility(!likesVisibility);
     }
 
-    const cartVisibilityHandler = () => {
-        setCartVisibility(!cartVisibility);
-    }
+    const dispatch = useDispatch();
 
     return (
         <header className={classes.Toolbar + ' Toolbar'}>
@@ -33,11 +32,11 @@ const Toolbar = (props) => {
                     className={classes.Navigation}
                     likeBtnClicked={likeIconBtnClickedHandler}
                     likeIconState={likesVisibility}
-                    cartIconClicked={cartVisibilityHandler}
+                    cartIconClicked={() => dispatch(actions.cartVisibilityToggle())}
                 />
             </nav>
             <Likes likeState={likesVisibility} closeBtnHandler={likeIconBtnClickedHandler} />
-            <ShoppingCart visible={cartVisibility} cartVisibilityRemove={cartVisibilityHandler} />
+            <ShoppingCart />
         </header>
     )
 };

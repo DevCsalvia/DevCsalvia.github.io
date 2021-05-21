@@ -17,7 +17,7 @@
 
 .Button:hover{
     transform: translateY(-.4rem);
-    box-shadow: .3rem .4rem .4rem rgba(0,0,0,.2);
+    box-shadow: .2rem .4rem .4rem rgba(0,0,0,.2);
 }
 
 .Button:active{
@@ -31,11 +31,20 @@
     padding: 1.5rem 4rem;
 }
 
-.Button--Border-Black{
+.ButtonBorder_Black{
     border: .1rem solid var(--color-black);
 }
 
-.Button--Black {
+.ButtonBlack {
     color: var(--color-white);
     background-color: var(--color-black);
+}
+
+.Btn_Disabled{
+    background-color: var(--color-light-grey-5);
+}
+
+.Btn_Disabled:hover{
+    transform: translateY(0);
+    box-shadow: none;
 }

@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import axios from '../../../../axios-orders';
 
 import * as actions from '../../../../store/actions/index';
 
@@ -14,32 +13,36 @@ const CartListItem = props => {
 
     /* Hooks Way to work with Redux Dispatch(useDispatch) and Get Access To Redux Store(useSelector) */
     const dispatch = useDispatch();
+    const token = useSelector(state => state.auth.token);
+    const userId = useSelector(state => state.auth.userId);
 
     ////////////////////////////////////////////////////////////////
     // Increase/Decrease amount of items in cart handler 
-    const changeAmountOfItemHandler = (price, type) => {
+    const { id: itemId } = props;
+
+    const changeAmountOfItemHandler = useCallback((type) => {
         switch (type) {
             case 'increase': {
                 if (item.amount >= 100) break;
                 dispatch(actions.clearCartData());
-                dispatch(actions.cartItemAmountChange('inc', item.amount, props.id));
+                dispatch(actions.cartItemAmountChange('inc', item.amount, itemId, token, userId));
                 break;
             }
             case 'decrease': {
                 if (item.amount <= 1) break;
                 dispatch(actions.clearCartData());
-                dispatch(actions.cartItemAmountChange('dec', item.amount, props.id));
+                dispatch(actions.cartItemAmountChange('dec', item.amount, itemId, token, userId));
                 break;
             }
             default: break;
         }
-    }
+    }, [token, userId, item.amount, itemId, dispatch]);
 
     ///////////////////////////////////////////////////////////////////
     // Removing item from the cart
     const removeItemBtnHandler = (e, id) => {
         e.preventDefault();
-        dispatch(actions.removeCartItem(id));
+        dispatch(actions.removeCartItem(id, token, userId));
     }
 
     return (
@@ -71,13 +74,13 @@ const CartListItem = props => {
                 <div className={classes.ShoppingCart__Product__Price_Wrapper}>
                     <div className={classes.ShoppingCart__Product__Price}>₽ {item.price ? Number(item.price).toFixed(2) : ''} RUB</div>
                     <div className={classes.ShoppingCart__Product__Amount}>
-                        <span onClick={() => changeAmountOfItemHandler(item.price, 'decrease')}>
+                        <span onClick={() => changeAmountOfItemHandler('decrease')}>
                             -
                     </span>
                         <span>
                             {item.amount}
                         </span>
-                        <span onClick={() => changeAmountOfItemHandler(item.price, 'increase')}>
+                        <span onClick={() => changeAmountOfItemHandler('increase')}>
                             +
                     </span>
                     </div>

@@ -35,14 +35,14 @@
     font-size: 1.2rem;
 
     max-height: 0;
-    padding: 0;
+    padding: 0 2rem;
     transition: padding .2s linear, max-height 1s cubic-bezier(0, 1, 0, 1);
 }
 
 .Accodrion-Container input:checked ~ ul {
     padding: 1rem 2rem;
     max-height: 1000px;
-    transition: padding .2s linear,max-height 1s cubic-bezier(0, 1, 0, 1);
+    transition: padding .2s linear, max-height 1s linear;
 }
 
 .Accodrion-Container ul p{

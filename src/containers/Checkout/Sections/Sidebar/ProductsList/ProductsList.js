@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 // actions
 import * as actions from '../../../../../store/actions/index';
 
+// UI Components
+import Loader from '../../../../../components/UI/Loader/Loader';
+
 import classes from './ProductsList.module.css';
 
 // Component
@@ -14,12 +17,14 @@ const ProductsList = props => {
 
     // get data from redux
     const checkoutCartData = useSelector(state => state.cart.cartData);
+    const token = useSelector(state => state.auth.token);
+    const userId = useSelector(state => state.auth.userId);
 
     ////////////////////////////////////////////////////////////////
     // INIT CART ITEMS FROM DATABASE
     const onInitCartItems = useCallback(() => {
-        dispatch(actions.initCartItems())
-    }, [dispatch]);
+        dispatch(actions.initCartItems(token, userId))
+    }, [dispatch, token, userId]);
 
     useEffect(() => {
         onInitCartItems();
@@ -27,18 +32,16 @@ const ProductsList = props => {
 
     ////////////////////////////////////////////////////////////////
     // Create list items markup
-    let sum = 0;
-    const listItemsMarkup = Object.values(checkoutCartData).map((item, index) => {
-        sum += +item.price * +item.amount;
-        return (<ListItem
-            key={index}
-            itemData={item}
-        />);
-    });
+    let listItemsMarkup = <Loader />;
+    if (checkoutCartData) {
+        listItemsMarkup = Object.values(checkoutCartData).map((item, index) => {
+            return (<ListItem
+                key={index}
+                itemData={item}
+            />);
+        });
 
-    useEffect(() => {
-        props.setTotal(sum);
-    }, [sum]);
+    }
 
     return (<div className={classes.Products_list__wrapper}>
         <ul className={classes.Products_list}>

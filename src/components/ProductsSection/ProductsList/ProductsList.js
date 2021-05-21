@@ -2,10 +2,11 @@ import { useEffect, useCallback } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../../store/actions';
-import { isLiked } from '../../../shared/LikesFunctionality';
-
 
 import ProductsListItem from './ProductsListItem/ProductsListItem';
+
+// UI components
+import Loader from '../../UI/Loader/Loader';
 
 import classes from './ProductsList.module.css';
 
@@ -15,6 +16,8 @@ const Products = (props) => {
 
     /* Redux Store Access */
     const likes = useSelector(state => state.like.likes);
+    const bestsellersLoading = useSelector(state => state.product.bestsellersLoading);
+    const sectionLoading = useSelector(state => state.product.sectionLoading);
 
     /* Redux Store Access */
     const products = useSelector(state => {
@@ -31,18 +34,19 @@ const Products = (props) => {
     /*//////////////////////////////////////////////////////////////////////////////////////////// */
     /* Products Functionality useCallback is used to not to recreate function inside */
     /* Prouducts Initializing from DataBase*/
+    const { sectionCategory } = props;
     const onInitProducts = useCallback(() => {
-        switch (props.sectionCategory) {
+        switch (sectionCategory) {
             case 'bestsellers': return (dispatch(actions.initBestsellerProducts()));
-            default: return (dispatch(actions.initProducts(props.sectionCategory)));
+            default: return (dispatch(actions.initProducts(sectionCategory)));
         };
-    }, [dispatch, props.sectionCategory])
+    }, [dispatch, sectionCategory])
 
     useEffect(() => {
         // Clear UI
         dispatch(actions.clearProductsObject());
         onInitProducts();
-    }, [onInitProducts]);
+    }, [onInitProducts, dispatch]);
 
     /*//////////////////////////////////////////////////////////////////////////////////////////// */
     /* Create Product List Items Markup(li elements) */
@@ -56,7 +60,7 @@ const Products = (props) => {
                     key={productId}
                     product={products[productId]}
                     productId={productId}
-                    Liked={isLiked(productId, likes)}
+                    Liked={likes[productId] ? true : false}
                 />);
             })
             .reduce((arr, el) => {
@@ -65,6 +69,9 @@ const Products = (props) => {
     } else {
         productsListItems = <Redirect to='/products' /> // Should remove it!
     }
+
+    if ((bestsellersLoading && props.sectionCategory === 'bestsellers') || (sectionLoading && props.sectionCategory !== 'bestsellers'))
+        productsListItems = <Loader local={true} />
 
     return (<ul className={classes.Products__List}>
         {productsListItems}

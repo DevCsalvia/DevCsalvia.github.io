@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { isLiked } from '../../../../../../shared/LikesFunctionality';
 import * as actions from '../../../../../../store/actions/index';
 
 import Button from '../../../../../../components/UI/Button/Button';
@@ -16,9 +15,11 @@ const FormBtns = props => {
     /*//////////////////////////////////////////////////////////////////////////////////////////// */
     /* Redux Store Access */
     const likes = useSelector(state => state.like.likes); // Likes Data
-    const likedVar = isLiked(props.productId, likes);
     /* Like Btn Handler */
-    const likeBtnClickedHandler = (like, liked) => liked ? props.dispatch(actions.removeLike(like.id)) : props.dispatch(actions.addLike(like));
+    const likeBtnClickedHandler = (like, liked) =>
+        liked ?
+            props.dispatch(actions.removeLike(like.id)) :
+            props.dispatch(actions.addLike(like));
 
 
     return (<div className={classes.ProductDetails__Content__ProductProps__ButtonsWrapper}>
@@ -31,7 +32,9 @@ const FormBtns = props => {
                 name: product.name,
                 price: product.price,
                 title: product.title
-            }, likedVar)}>{likedVar ? <HeartSvg /> : <HeartOSvg />}</div>
+            }, likes[props.productId] ? true : false)}>
+            {likes[props.productId] ? <HeartSvg /> : <HeartOSvg />}
+        </div>
     </div>);
 };
 

@@ -25,9 +25,11 @@ const LikesList = (props) => {
 
     let likesListMarkup = [];
 
-    if (likes) likesListMarkup = likes.map(item => <Like
-        itemData={item}
-        key={item.id} />);
+    if (likes) likesListMarkup = Object.keys(likes).map(key => <Like
+        itemData={likes[key]}
+        key={likes[key].id} />);
+
+    if (likesListMarkup.length === 0) likesListMarkup = <li className="LikesList__Empty_Title">No Likes Yet</li>
 
     return (
         <div className={`LikesList__Wrapper ${props.likeState ? 'LikesList__Wrapper--Visibility' : ''} `}>

@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.Summary_Section__Content .Button{
+.Summary_Section__Content button{
     justify-self: start;
 }
 

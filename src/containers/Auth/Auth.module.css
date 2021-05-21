@@ -1,7 +1,55 @@
 .Auth{
+    padding: 4rem 0;
+
+}
+
+.Auth__Content{
+    grid-column: center-start / center-end;
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 4rem;
+}
+
+.Auth__Content form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20rem;
-    font-size: 3.6rem;
+    flex-direction: column;
+}
+
+
+.Auth__Signup{
+    grid-column: 3 / 4;
+}
+
+.Auth__Signup form button{
+    align-self: start;
+    margin-top: 2rem;
+}
+
+.Auth__LoginFormWrapper form h2, .Auth__Signup form h2{
+    font-size: var( --Heading-Font-Size-5);
+    font-weight: 600;
+}
+
+.Auth__LoginFormWrapper form input, .Auth__Signup form input {
+    margin-top: 2rem;
+}
+
+/*///////////////////////////////////////////////*/
+/* Separator */
+.Auth__Content_Separator{
+    position: relative;
+    border-right: 1px solid var(--color-black);
+}
+
+.Auth__Content_Separator span{
+    position: absolute;
+    background-color: var(--color-white);
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--Default-Font-Size);
+    font-weight: 600;
+    padding: 1rem 0;
 }

@@ -2,43 +2,41 @@ import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from '../../shared/utility';
 
 const initialState = {
-    likes: []
+    likes: {}
 };
 
 // JSON.stringify will convert our data into json string
-const persistData = (likesArray) => localStorage.setItem('likes', JSON.stringify(likesArray));
+const persistData = (likesData) => localStorage.setItem('likes', JSON.stringify(likesData));
 
 const addLike = (state, action) => {
-    const updatedLikes = [action.like, ...state.likes];//Adding Like Is It immutable
-    const updatedState = { likes: updatedLikes, };
-
+    // const updatedLikes = [...state.likes, action.like];//Adding Like Is It immutable
+    const stateLikes = { ...state.likes };
+    stateLikes[action.like.id] = action.like;
+    const updatedState = { likes: stateLikes };
     // Persist data in localStorage
-    persistData(updatedLikes);
+    persistData(stateLikes);
 
     return updateObject(state, updatedState);
 };
 
 const removeLike = (state, action) => {
-    const index = state.likes.findIndex(el => el.id === action.id);
-    const updatedLikes = [
-        ...state.likes.slice(0, index), /* Slice from begin to an element with index(not included) */
-        ...state.likes.slice(index + 1) /* Slice from index of an element + 1 till the end */
-    ];
-    const updatedState = { likes: updatedLikes };
+    const stateLikes = { ...state.likes };
+    delete stateLikes[action.id];
+    const updatedState = { likes: stateLikes };
 
     // Persist data in localStorage
-    persistData(updatedLikes);
+    persistData(stateLikes);
 
     return updateObject(state, updatedState);
 }
 
 const initLikes = (state, action) => {
     // JSON.parse will convert string into the data structures witch were before
-    const storageLikesArray = JSON.parse(localStorage.getItem('likes'));
-    // console.log(storageLikesArray);
+    const storageLikesData = JSON.parse(localStorage.getItem('likes'));
+    // console.log(storageLikesData);
 
     // Restoring likes from the localStorage
-    if (storageLikesArray) return (updateObject(state, { likes: storageLikesArray }))
+    if (storageLikesData) return (updateObject(state, { likes: storageLikesData }))
     else return state;
 }
 

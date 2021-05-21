@@ -8,7 +8,7 @@
     row-gap: 4rem;
 }
 
-.Goods-Section__Content .Button{
+.Goods-Section__Content button{
     justify-self: start;
 }
 

@@ -1,4 +1,4 @@
-.input_field {
+.Input_Field {
     padding: 1.2rem .8rem;
     outline: none;
     border: 2px solid var(--color-light-grey-5);
@@ -7,6 +7,14 @@
     transition: all .2s ease-out;
 }
 
-.input_field:focus{
+.Input_Field:focus{
     border-color: var(--color-light-grey-4);
+}
+
+.Input_FieldBlackBorder:focus{
+    border-color: var(--color-black);
+}
+
+.Input_NotValid{
+    border-color: var(--color-danger) !important;
 }

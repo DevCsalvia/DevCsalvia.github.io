@@ -6,8 +6,10 @@ import * as actions from '../actions/index';
 export function* initProductsSaga(action) {
     // Getting Products From DataBase if not put Failed Action
     try {
+        yield put(actions.fetchProductsStart());
         const res = yield axios.get(`/products/${action.category}.json`);
         yield put(actions.setProducts(res.data));
+        yield put(actions.fetchProductsSuccess());
     } catch (error) {
         yield put(actions.fetchProductsFailed());
     }
@@ -15,6 +17,7 @@ export function* initProductsSaga(action) {
 
 export function* initBestsellerProducts(action) {
     // Getting Products From DataBase if not put Failed Action
+    yield put(actions.fetchProductsStart('bestsellers'));
     let res = yield axios.get(`/products/bestsellers.json`);
     res = res.data;
     // create actual bestseller products
@@ -24,6 +27,7 @@ export function* initBestsellerProducts(action) {
         resObj[res[key].id] = queryResult.data;
     }
     yield put(actions.setProducts(resObj, 'bestsellers'));
+    yield put(actions.fetchProductsSuccess('bestsellers'))
 }
 
 export function* getProductSaga(action) {
