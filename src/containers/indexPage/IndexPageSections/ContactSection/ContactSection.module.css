@@ -1,0 +1,89 @@
+.ContactSection{
+    padding: 8rem 0;
+}
+
+.ContactSection__Content{
+    display: grid;
+    grid-template-columns: minmax(4rem, 26rem) repeat(2, minmax(max-content, 1fr)) minmax(4rem, 26rem);
+
+}
+
+
+/******************************LEFT SIDE********************************/
+.ContactSection__Content__Information{
+    grid-column: 2 / 3;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .1);
+    margin-right: 2rem;
+    padding: 0 4rem;
+}
+
+.ContactSection__Content__Text{
+    grid-column: 3 / 4;
+}
+
+.ContactSection__Information_Heading{
+    padding: 4rem 0;
+    color: var(--color-black);
+    font-size: var(--Heading-Font-Size-6);
+    font-weight: 500;
+    position: relative;
+}
+
+.ContactSection__Information_Heading::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -4rem;
+    width: calc(100% + 8rem);
+    border-bottom: 2px solid var(--color-light-grey);
+}
+
+.ContactSection__Information_Body{
+    padding: 4rem 0;
+}
+
+.ContactSection__Information_Body_Item{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    column-gap: 4rem;
+    font-size: var(--Default-Font-Size);
+}
+
+.ContactSection__Information_Body_Item:not(:first-child){
+    margin-top: 4rem;
+}
+
+.ContactSection__Information_Body_Item a{
+    text-decoration: underline;
+    color: blue;
+}
+
+/*********************************Right Side*********************************/
+.ContactSection__Content__Text{
+    display: grid;
+    row-gap: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    align-self: start;
+}
+
+.ContactSection__Content__Text_Item{
+
+}
+
+.ContactSection__Content__Text_Item h4{
+    color: var(--color-blue);
+    font-size: var(--Heading-Font-Size-7);
+    font-weight: 600;
+}
+
+.ContactSection__Content__Text_Item p{
+    font-size: var(--Default-Font-Size-1);
+    margin-top: 1rem;
+}
+
+.ContactSection__Content__Text_Item:first-child h4{
+    color: var(--color-dark-grey);
+    font-size: var(--Heading-Font-Size-5);
+}

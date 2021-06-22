@@ -10,7 +10,6 @@ export function* purchaseItemsSaga(action) {
         yield put(actions.purchaseItemsStart());
         yield axios.post('/orders.json?auth=' + token, action.order);
         // CLEAR USER CART
-        yield put(actions.removeUserCart(token, userId));
         yield put(actions.createUserCart(token, userId));
         yield put(actions.purchaseItemsSuccess());
     } catch (error) {

@@ -1,14 +1,11 @@
-import { NavLink } from 'react-router-dom';
-
-import './NavigationItem.css';
+import { Link } from 'react-router-dom';
 
 const NavigationItem = (props) => (
     <li>
-        <NavLink
+        <Link
             exact={props.exact}
             to={props.link}
-            activeClassName="active"
-            onClick={props.iconClickedHandler}>{props.children}</NavLink>
+            onClick={props.clicked}>{props.children}</Link>
     </li>
 );
 

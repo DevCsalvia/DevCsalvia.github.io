@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import Aux from './hoc/Auxil/Auxil';
@@ -7,11 +7,17 @@ import * as actions from './store/actions/index';
 // Containers
 import Layout from './hoc/Layout/Layout';
 import IndexPage from './containers/IndexPage/IndexPage';
-import ProductsPage from './containers/ProductsPage/ProductsPage';
-import Checkout from './containers/Checkout/Checkout';
 import ProductInput from './containers/ProductInput/ProductInput';
-import Auth from './containers/Auth/Auth';
-import Account from './containers/Account/Account';
+
+// LAZY LOADING
+const Checkout = React.lazy(() => import('./containers/Checkout/Checkout'));
+
+const ProductsPage = React.lazy(() => import('./containers/ProductsPage/ProductsPage'));
+
+const Auth = React.lazy(() => import('./containers/Auth/Auth'));
+
+const Account = React.lazy(() => import('./containers/Account/Account'));
+
 
 const App = props => {
   const dispatch = useDispatch();
@@ -23,11 +29,11 @@ const App = props => {
 
   let routes = (
     <Switch>
-      <Route path={'/auth'} component={Auth} />
-      <Route path={'/account'} component={Account} />
+      <Route path={'/auth'} render={(props) => <Auth {...props} />} />
+      <Route path={'/account'} render={(props) => <Account {...props} />} />
       <Route path={'/productinput'} component={ProductInput} />
-      <Route path={'/checkout'} component={Checkout} />
-      <Route path={'/products'} render={ProductsPage} />
+      <Route path={'/checkout'} render={(props) => <Checkout {...props} />} />
+      <Route path={'/products'} render={(props) => <ProductsPage {...props} />} />
       <Route path={'/'} exact component={IndexPage} />
       <Redirect to='/' />
     </Switch>

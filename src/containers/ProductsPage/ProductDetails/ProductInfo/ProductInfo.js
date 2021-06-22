@@ -11,9 +11,9 @@ const ProductInfo = props => {
     return (<div className={classes.ProductDetails__Content__PropsWrapper}>
         <div className={classes.ProductDetails__Content__Product_Title}>{props.productData.title}</div>
         <div className={classes.ProductDetails__Content__Product_Name}>{props.productData.name}</div>
-        <div className={classes.ProductDetails__Content__Product_Price}>{props.productData.price}rub</div>
+        <div className={classes.ProductDetails__Content__Product_Price}>{props.productData.price} Rub</div>
         <div className={classes.ProductDetails__Content__Product__Stars}>
-            <Stars amount='5' /> <span>4.9</span>
+            <Stars amount='5' />&nbsp;<span>4.9</span>
         </div>
         <ProductInfoForm productData={props.productData} />
         <Accrodion detailsContent={props.productData.details} />

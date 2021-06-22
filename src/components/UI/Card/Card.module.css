@@ -6,6 +6,7 @@
     justify-content: start;
     border: .2rem solid var(--color-black);
     border-radius: .4rem;
+    background-color: var(--color-white);
 }
 
 .Card_User{

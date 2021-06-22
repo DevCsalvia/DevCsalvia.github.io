@@ -93,11 +93,3 @@ export const createUserCart = (token, userId) => {
         userId: userId
     }
 }
-
-export const removeUserCart = (token, userId) => {
-    return {
-        type: actionTypes.REMOVE_USER_CART,
-        token: token,
-        userId: userId
-    }
-}

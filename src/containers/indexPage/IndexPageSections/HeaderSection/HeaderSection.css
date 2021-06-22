@@ -10,7 +10,7 @@
     cursor: grab;
 }
 
-.Slider .slick-active:active{ /*SHOULD ASK ABOUT GRABBING STATE*/
+.Slider .slick-active:active{
     cursor: grabbing;
 }
 

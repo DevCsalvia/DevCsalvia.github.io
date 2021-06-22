@@ -30,7 +30,6 @@ export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const CART_ITEM_AMOUNT_CHANGE = 'CART_ITEM_AMOUNT_CHANGE';
 export const CLEAR_CART_DATA = 'CLEAR_CART_DATA';
 export const CREATE_USER_CART = 'CREATE_USER_CART';
-export const REMOVE_USER_CART = 'REMOVE_USER_CART';
 
 // It's for purchase handling reducer and actions [order reducer]
 export const PURCHASE_ITEMS_START = 'PURCHASE_ITEMS_START';

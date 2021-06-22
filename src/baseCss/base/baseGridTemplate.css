@@ -4,7 +4,7 @@
     grid-template-columns: minmax(2rem, 8rem) minmax(max-content, 1fr) minmax(2rem, 8rem);
 }
 
-.Feedback_Section, .Goods-Section, .Site-footer, .Products_Wrapper, .checkout, .Auth, .AccountWrapper {
+.Feedback_Section, .Goods-Section, .Site-footer, .Products_Wrapper, .checkout, .Auth, .AccountWrapper, .AboutSection__Content {
     display: grid;
     grid-template-columns: [Full-Start] minmax(2rem, 26rem)[center-start] minmax(max-content, 1fr) [center-end]minmax(2rem, 26rem) [Full-End];
 }

@@ -1,5 +1,6 @@
 .Goods-Section{
     padding: 4rem 0;
+    background-color:var(--color-light-grey-1);
 }
 
 .Goods-Section__Content{

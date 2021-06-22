@@ -4,7 +4,10 @@ import Aux from '../../hoc/Auxil/Auxil';
 import HeaderSection from './IndexPageSections/HeaderSection/HeaderSection';
 import FeedbackSection from './IndexPageSections/FeedbackSection/FeedbackSection';
 import GoodsSection from './IndexPageSections/GoodsSection/GoodsSection';
+import AboutSection from './IndexPageSections/AboutSection/AboutSection';
 import SummarySection from './IndexPageSections/SummarySection/SummarySection';
+import ContactSection from './IndexPageSections/ContactSection/ContactSection';
+
 
 import './IndexPage.css';
 
@@ -68,7 +71,9 @@ const IndexPage = props => {
             <HeaderSection />
             <FeedbackSection />
             <GoodsSection />
+            <AboutSection />
             <SummarySection />
+            <ContactSection />
         </Aux>
     );
 };

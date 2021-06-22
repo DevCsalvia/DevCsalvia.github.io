@@ -47,16 +47,9 @@ export function* cartItemAmountChangeSaga(action) {
     }
 }
 
-export function* removeUserCartSaga(action) {
-    try {
-        yield axios.delete('/cart/' + action.userId + '.json?auth=' + action.token);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
 export function* createUserCartSaga(action) {
     try {
+        yield axios.delete('/cart/' + action.userId + '.json?auth=' + action.token);
         yield axios.patch(`/cart/${action.userId}.json?auth=${action.token}`, { userId: action.userId });
     } catch (error) {
         console.log(error);

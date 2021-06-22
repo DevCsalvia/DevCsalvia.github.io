@@ -28,8 +28,7 @@ export {
     removeCartItem,
     cartItemAmountChange,
     clearCartData,
-    createUserCart,
-    removeUserCart
+    createUserCart
 } from './cart'
 export {
     purchaseItems,

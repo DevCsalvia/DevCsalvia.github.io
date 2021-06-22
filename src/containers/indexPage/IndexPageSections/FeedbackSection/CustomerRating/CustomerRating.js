@@ -4,7 +4,7 @@ import Stars from '../../../../../components/UI/Stars/Stars';
 /*Take stars from svg MoonWalk*/
 const CustomerRating = props => (
     <div className="Rating_Wrapper">
-        Customer Feedback
+        Customers Feedback
         <div className="Rating_Stars">
             <Stars amount='5' />
         </div>
