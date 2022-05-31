@@ -6,7 +6,7 @@ import * as actions from './store/actions/index';
 
 // Containers
 import Layout from './hoc/Layout/Layout';
-import IndexPage from './containers/IndexPage/IndexPage';
+import IndexPage from './containers/indexPage/IndexPage';
 import ProductInput from './containers/ProductInput/ProductInput';
 
 // LAZY LOADING
